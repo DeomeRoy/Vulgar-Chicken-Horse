@@ -1,9 +1,9 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 228,
-    "major": 5,
-    "minor": 5,
+    "build": 99,
+    "major": 4,
+    "minor": 0,
     "revision": 0
   },
   "properties": {
@@ -18,6 +18,7 @@
     "scaleMode": "linear",
     "sizeOnStartupMode": "adaptWidth",
     "templateSlug": "",
+    "useExternalSourceFiles": false,
     "version": "1.0.0",
     "name": "Vulgar Chicken Horse",
     "description": "",
@@ -64,6 +65,7 @@
   "resources": {
     "resources": [
       {
+        "alwaysLoaded": false,
         "file": "assets/NewTiledSprite.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\",\"pskl\":{},\"localFilePath\":\"assets/NewTiledSprite.png\"}",
@@ -72,6 +74,7 @@
         "userAdded": false
       },
       {
+        "alwaysLoaded": false,
         "file": "Player.png",
         "kind": "image",
         "metadata": "",
@@ -80,6 +83,7 @@
         "userAdded": false
       },
       {
+        "alwaysLoaded": false,
         "file": "assets/Player.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
@@ -88,6 +92,7 @@
         "userAdded": false
       },
       {
+        "alwaysLoaded": false,
         "file": "assets/Player2.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
@@ -96,6 +101,7 @@
         "userAdded": false
       },
       {
+        "alwaysLoaded": false,
         "file": "Player2.png",
         "kind": "image",
         "metadata": "{\"localFilePath\":\"Player2.png\",\"extension\":\".png\"}",
@@ -104,6 +110,7 @@
         "userAdded": false
       },
       {
+        "alwaysLoaded": false,
         "file": "assets/Idle.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/Idle.png\"}",
@@ -112,6 +119,7 @@
         "userAdded": false
       },
       {
+        "alwaysLoaded": false,
         "file": "assets/Idle2.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/Idle2.png\"}",
@@ -120,6 +128,7 @@
         "userAdded": false
       },
       {
+        "alwaysLoaded": false,
         "file": "Player3.png",
         "kind": "image",
         "metadata": "{\"localFilePath\":\"Player3.png\",\"extension\":\".png\"}",
@@ -128,6 +137,7 @@
         "userAdded": false
       },
       {
+        "alwaysLoaded": false,
         "file": "Player4.png",
         "kind": "image",
         "metadata": "{\"localFilePath\":\"Player4.png\",\"extension\":\".png\"}",
@@ -136,6 +146,7 @@
         "userAdded": false
       },
       {
+        "alwaysLoaded": false,
         "file": "assets/Jump.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
@@ -144,6 +155,7 @@
         "userAdded": false
       },
       {
+        "alwaysLoaded": false,
         "file": "assets/Jump2.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
@@ -152,6 +164,7 @@
         "userAdded": false
       },
       {
+        "alwaysLoaded": false,
         "file": "assets/Jump3.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
@@ -160,6 +173,7 @@
         "userAdded": false
       },
       {
+        "alwaysLoaded": false,
         "file": "assets/Fall-Down.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
@@ -168,6 +182,7 @@
         "userAdded": false
       },
       {
+        "alwaysLoaded": false,
         "file": "Player5.png",
         "kind": "image",
         "metadata": "",
@@ -176,6 +191,7 @@
         "userAdded": false
       },
       {
+        "alwaysLoaded": false,
         "file": "assets/Run.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
@@ -184,6 +200,7 @@
         "userAdded": false
       },
       {
+        "alwaysLoaded": false,
         "file": "assets/Run2.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
@@ -192,6 +209,7 @@
         "userAdded": false
       },
       {
+        "alwaysLoaded": false,
         "file": "assets/Run3.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
@@ -200,12 +218,31 @@
         "userAdded": false
       },
       {
+        "alwaysLoaded": false,
         "file": "assets/Run4.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "Run4",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Title Image.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Title Image.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Text Box.png",
+        "kind": "image",
+        "metadata": "{\"localFilePath\":\"Text Box.png\",\"extension\":\".png\",\"pskl\":{}}",
+        "name": "Text Box.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -237,7 +274,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.7315786463753009,
+        "zoomFactor": 0.44485159988866535,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -778,25 +815,15 @@
           "conditions": [
             {
               "type": {
-                "value": "KeyFromTextPressed"
+                "value": "KeyPressed"
               },
               "parameters": [
                 "",
-                "\"a\""
+                "Left"
               ]
             }
           ],
           "actions": [
-            {
-              "type": {
-                "value": "MettreX"
-              },
-              "parameters": [
-                "Player",
-                "+",
-                "-5"
-              ]
-            },
             {
               "type": {
                 "value": "FlippableCapability::FlippableBehavior::FlipX"
@@ -825,25 +852,15 @@
           "conditions": [
             {
               "type": {
-                "value": "KeyFromTextPressed"
+                "value": "KeyPressed"
               },
               "parameters": [
                 "",
-                "\"d\""
+                "Right"
               ]
             }
           ],
           "actions": [
-            {
-              "type": {
-                "value": "MettreX"
-              },
-              "parameters": [
-                "Player",
-                "+",
-                "5"
-              ]
-            },
             {
               "type": {
                 "value": "FlippableCapability::FlippableBehavior::FlipX"
@@ -873,21 +890,11 @@
             {
               "type": {
                 "inverted": true,
-                "value": "KeyFromTextPressed"
+                "value": "PlatformBehavior::PlatformerObjectBehavior::IsMovingEvenALittle"
               },
               "parameters": [
-                "",
-                "\"a\""
-              ]
-            },
-            {
-              "type": {
-                "inverted": true,
-                "value": "KeyFromTextPressed"
-              },
-              "parameters": [
-                "",
-                "\"d\""
+                "Player",
+                "PlatformerObject"
               ]
             }
           ],
@@ -1040,9 +1047,282 @@
           "type": "ScalableCapability::ScalableBehavior"
         }
       ]
+    },
+    {
+      "b": 209,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "Title",
+      "name": "Title",
+      "r": 209,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 209,
+      "uiSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 0.5250860067782502,
+        "windowMask": false
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 1094,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Title_Image",
+          "persistentUuid": "45b9f63d-93b2-414d-ac7c-5853833a68b9",
+          "width": 1934,
+          "x": -6,
+          "y": -10,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 200,
+          "layer": "",
+          "name": "Start",
+          "persistentUuid": "97e9a87f-39c3-4bfe-8436-8248a3cdb882",
+          "width": 400,
+          "x": 50,
+          "y": 730,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 200,
+          "layer": "",
+          "name": "Level",
+          "persistentUuid": "d7caab19-09a9-4ffd-a8e7-fc5a17962892",
+          "width": 400,
+          "x": 530,
+          "y": 730,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 200,
+          "layer": "",
+          "name": "Setting",
+          "persistentUuid": "a8b07934-2877-487b-9a9d-4280896d3839",
+          "width": 400,
+          "x": 1010,
+          "y": 730,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 200,
+          "layer": "",
+          "name": "Exit",
+          "persistentUuid": "1ccfe3b5-1c74-400c-a61b-052840f2a9b5",
+          "width": 400,
+          "x": 1490,
+          "y": 730,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "assetStoreId": "",
+          "bottomMargin": 0,
+          "height": 32,
+          "leftMargin": 0,
+          "name": "Title_Image",
+          "rightMargin": 0,
+          "texture": "Title Image.png",
+          "tiled": false,
+          "topMargin": 0,
+          "type": "PanelSpriteObject::PanelSprite",
+          "width": 32,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "bottomMargin": 0,
+          "height": 32,
+          "leftMargin": 0,
+          "name": "Start",
+          "rightMargin": 0,
+          "texture": "Text Box.png",
+          "tiled": false,
+          "topMargin": 0,
+          "type": "PanelSpriteObject::PanelSprite",
+          "width": 32,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "bottomMargin": 0,
+          "height": 32,
+          "leftMargin": 0,
+          "name": "Level",
+          "rightMargin": 0,
+          "texture": "Text Box.png",
+          "tiled": false,
+          "topMargin": 0,
+          "type": "PanelSpriteObject::PanelSprite",
+          "width": 32,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "bottomMargin": 0,
+          "height": 32,
+          "leftMargin": 0,
+          "name": "Setting",
+          "rightMargin": 0,
+          "texture": "Text Box.png",
+          "tiled": false,
+          "topMargin": 0,
+          "type": "PanelSpriteObject::PanelSprite",
+          "width": 32,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "bottomMargin": 0,
+          "height": 32,
+          "leftMargin": 0,
+          "name": "Exit",
+          "rightMargin": 0,
+          "texture": "Text Box.png",
+          "tiled": false,
+          "topMargin": 0,
+          "type": "PanelSpriteObject::PanelSprite",
+          "width": 32,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        }
+      ],
+      "objectsFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "objectName": "Title_Image"
+          },
+          {
+            "objectName": "Start"
+          },
+          {
+            "objectName": "Level"
+          },
+          {
+            "objectName": "Setting"
+          },
+          {
+            "objectName": "Exit"
+          }
+        ]
+      },
+      "events": [],
+      "layers": [
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Light",
+              "doubleParameters": {
+                "elevation": 45,
+                "intensity": 1,
+                "rotation": 0
+              },
+              "stringParameters": {
+                "groundColor": "64;64;64",
+                "skyColor": "255;255;255",
+                "top": "Y-"
+              },
+              "booleanParameters": {}
+            }
+          ]
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "Effect",
+          "type": "EffectCapability::EffectBehavior"
+        },
+        {
+          "name": "Opacity",
+          "type": "OpacityCapability::OpacityBehavior"
+        },
+        {
+          "name": "Resizable",
+          "type": "ResizableCapability::ResizableBehavior"
+        }
+      ]
     }
   ],
   "externalEvents": [],
   "eventsFunctionsExtensions": [],
-  "externalLayouts": []
+  "externalLayouts": [],
+  "externalSourceFiles": []
 }
