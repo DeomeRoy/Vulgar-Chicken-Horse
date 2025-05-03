@@ -446,6 +446,14 @@
         "name": "NewTiledSprite3",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "png-transparent-computer-icons-rotate-miscellaneous-angle-text.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "png-transparent-computer-icons-rotate-miscellaneous-angle-text.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -463,6 +471,16 @@
     },
     {
       "name": "Building_Mode",
+      "type": "boolean",
+      "value": true
+    },
+    {
+      "name": "Score",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "Last_Block",
       "type": "boolean",
       "value": true
     }
@@ -833,7 +851,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.6197916666666761,
+        "zoomFactor": 0.5079575118131847,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -871,8 +889,8 @@
           "layer": "",
           "name": "Player",
           "persistentUuid": "e286dc8e-5c24-41d5-915e-29fd23a5aa1b",
-          "width": 155,
-          "x": 101,
+          "width": 160,
+          "x": 32,
           "y": 453,
           "zOrder": 2,
           "numberProperties": [],
@@ -987,7 +1005,7 @@
           "layer": "",
           "name": "NewTiledSprite",
           "persistentUuid": "73df7387-7a97-4485-a67e-f9b5e07300b0",
-          "width": 320,
+          "width": 352,
           "x": 1696,
           "y": 0,
           "zOrder": 12,
@@ -1032,14 +1050,14 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 896,
+          "height": 1152,
           "keepRatio": true,
           "layer": "",
           "name": "Floor",
           "persistentUuid": "ed4c1afe-5cf1-4143-9c1a-55a18268dcdb",
           "width": 32,
           "x": -32,
-          "y": 224,
+          "y": -32,
           "zOrder": 17,
           "numberProperties": [],
           "stringProperties": [],
@@ -1054,7 +1072,7 @@
           "layer": "",
           "name": "Floor2",
           "persistentUuid": "a558334e-0f56-419e-bef6-ef91c3d38589",
-          "width": 2048,
+          "width": 2112,
           "x": -32,
           "y": 1120,
           "zOrder": 18,
@@ -1075,6 +1093,74 @@
           "x": 1696,
           "y": 224,
           "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 32,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Floor",
+          "persistentUuid": "2896ce8d-0514-411e-8e09-303613a88d7e",
+          "width": 2080,
+          "x": 0,
+          "y": -32,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 1152,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Floor",
+          "persistentUuid": "e4348cbb-c146-462e-81c0-2b754823144c",
+          "width": 32,
+          "x": 2048,
+          "y": -32,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 96,
+          "keepRatio": true,
+          "layer": "",
+          "name": "ScoreBoard",
+          "persistentUuid": "f38ee13d-a4bc-4dda-bcb8-8b4b9ba3de9b",
+          "width": 736,
+          "x": 416,
+          "y": 32,
+          "zOrder": 19,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 48,
+          "height": 96,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Clear_Button",
+          "persistentUuid": "718bb0af-bc8e-461a-9ebb-dea6c95fa21b",
+          "width": 96,
+          "x": 1568,
+          "y": 32,
+          "zOrder": 21,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1665,7 +1751,7 @@
         {
           "assetStoreId": "",
           "bottomMargin": 0,
-          "height": 32,
+          "height": 64,
           "leftMargin": 0,
           "name": "Object_01",
           "rightMargin": 0,
@@ -1673,7 +1759,7 @@
           "tiled": false,
           "topMargin": 0,
           "type": "PanelSpriteObject::PanelSprite",
-          "width": 32,
+          "width": 256,
           "variables": [],
           "effects": [],
           "behaviors": [
@@ -1695,7 +1781,7 @@
         {
           "assetStoreId": "",
           "bottomMargin": 0,
-          "height": 32,
+          "height": 128,
           "leftMargin": 0,
           "name": "Object_03",
           "rightMargin": 0,
@@ -1703,7 +1789,7 @@
           "tiled": false,
           "topMargin": 0,
           "type": "PanelSpriteObject::PanelSprite",
-          "width": 32,
+          "width": 128,
           "variables": [],
           "effects": [],
           "behaviors": [
@@ -1742,17 +1828,17 @@
           "effects": [],
           "behaviors": [
             {
-              "canBeGrabbed": true,
               "isFolded": true,
               "name": "Platform",
-              "platformType": "NormalPlatform",
               "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": true,
+              "platformType": "NormalPlatform",
               "yGrabOffset": 0
             },
             {
-              "checkCollisionMask": true,
               "name": "可拖動",
-              "type": "DraggableBehavior::Draggable"
+              "type": "DraggableBehavior::Draggable",
+              "checkCollisionMask": true
             }
           ],
           "animations": [
@@ -1920,11 +2006,171 @@
               "yGrabOffset": 0
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "ScoreBoard",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Score：",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 80,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Score：",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 80,
+            "color": "0;0;0"
+          }
+        },
+        {
+          "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
+          "name": "Clear_Button",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 16,
+            "RightPadding": 16,
+            "PressedLabelOffsetY": 10,
+            "BottomPadding": 32,
+            "TopPadding": 16,
+            "HoveredFadeOutDuration": 0.25
+          },
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 32,
+              "height": 106,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Grey Button_Hovered.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 256
+            },
+            "Idle": {
+              "bottomMargin": 32,
+              "height": 106,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Grey Button_Idle.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 256
+            },
+            "Label": {
+              "bold": true,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "Clear",
+              "font": "",
+              "textAlignment": "center",
+              "characterSize": 20,
+              "color": {
+                "b": 79,
+                "g": 72,
+                "r": 72
+              },
+              "content": {
+                "bold": true,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "Clear",
+                "font": "",
+                "textAlignment": "center",
+                "verticalTextAlignment": "top",
+                "characterSize": 20,
+                "color": "72;72;79"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 16,
+              "height": 106,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Grey Button_Pressed.png",
+              "tiled": false,
+              "topMargin": 32,
+              "width": 256
+            }
+          }
         }
       ],
       "objectsFolderStructure": {
         "folderName": "__ROOT",
         "children": [
+          {
+            "folderName": "Interface",
+            "children": [
+              {
+                "objectName": "ScoreBoard"
+              },
+              {
+                "objectName": "NewTiledSprite"
+              },
+              {
+                "objectName": "GameMode"
+              },
+              {
+                "objectName": "SwitchButton"
+              },
+              {
+                "objectName": "ExitButton"
+              }
+            ]
+          },
+          {
+            "folderName": "Block",
+            "children": [
+              {
+                "objectName": "Object_01"
+              },
+              {
+                "objectName": "Object_02"
+              },
+              {
+                "objectName": "Object_03"
+              }
+            ]
+          },
           {
             "objectName": "Floor"
           },
@@ -1935,28 +2181,10 @@
             "objectName": "Player"
           },
           {
-            "objectName": "ExitButton"
-          },
-          {
-            "objectName": "SwitchButton"
-          },
-          {
-            "objectName": "GameMode"
-          },
-          {
-            "objectName": "Object_01"
-          },
-          {
-            "objectName": "Object_02"
-          },
-          {
-            "objectName": "Object_03"
-          },
-          {
-            "objectName": "NewTiledSprite"
-          },
-          {
             "objectName": "Goal"
+          },
+          {
+            "objectName": "Clear_Button"
           }
         ]
       },
@@ -1983,11 +2211,46 @@
               "parameters": [
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
             }
           ],
-          "actions": []
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Score",
+                "=",
+                "1000"
+              ]
+            }
+          ]
         },
         {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "ScoreBoard",
+                "Text",
+                "=",
+                "\"Score：\" + ToString(Score)"
+              ]
+            }
+          ]
+        },
+        {
+          "disabled": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -2083,6 +2346,16 @@
                 "Animation",
                 "=",
                 "\"Idle\""
+              ]
+            },
+            {
+              "type": {
+                "value": "FlippableCapability::FlippableBehavior::FlipX"
+              },
+              "parameters": [
+                "Player",
+                "Flippable",
+                "no"
               ]
             }
           ]
@@ -2479,7 +2752,7 @@
                   "parameters": [
                     "Player",
                     "=",
-                    "101"
+                    "32"
                   ]
                 },
                 {
@@ -2524,7 +2797,6 @@
           ]
         },
         {
-          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [],
@@ -2628,6 +2900,102 @@
             {
               "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyFromTextReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "\"e\""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "DraggableBehavior::Dragged"
+                          },
+                          "parameters": [
+                            "Object_01",
+                            "可拖動"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "DraggableBehavior::Dragged"
+                          },
+                          "parameters": [
+                            "Object_02",
+                            "可拖動"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "DraggableBehavior::Dragged"
+                          },
+                          "parameters": [
+                            "Object_03",
+                            "可拖動"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Object_01",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Object_02",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Object_03",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "Score",
+                        "+",
+                        "100"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [],
               "events": [
@@ -2656,6 +3024,124 @@
                         "180"
                       ]
                     }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PosX"
+                          },
+                          "parameters": [
+                            "Object_01",
+                            "=",
+                            "1728"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PosY"
+                          },
+                          "parameters": [
+                            "Object_01",
+                            "=",
+                            "640"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "Score",
+                                ">",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "Object_01",
+                                "Object_01.X()",
+                                "Object_01.Y()",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "Score",
+                                "-",
+                                "100"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanVariable"
+                              },
+                              "parameters": [
+                                "Last_Block",
+                                "False",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "Score",
+                                "=",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ActivateBehavior"
+                              },
+                              "parameters": [
+                                "Object_01",
+                                "可拖動",
+                                "no"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
                   ]
                 },
                 {
@@ -2681,6 +3167,51 @@
                         "Opacity",
                         "=",
                         "255"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "Last_Block",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "Score",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanVariable"
+                          },
+                          "parameters": [
+                            "Last_Block",
+                            "False",
+                            ""
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -2710,6 +3241,152 @@
                         "180"
                       ]
                     }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PosX"
+                          },
+                          "parameters": [
+                            "Object_02",
+                            "=",
+                            "1760"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PosY"
+                          },
+                          "parameters": [
+                            "Object_02",
+                            "=",
+                            "288"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "Score",
+                                ">",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "Object_02",
+                                "Object_02.X()",
+                                "Object_02.Y()",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "Score",
+                                "-",
+                                "100"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanVariable"
+                              },
+                              "parameters": [
+                                "Last_Block",
+                                "False",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "Score",
+                                "=",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ActivateBehavior"
+                              },
+                              "parameters": [
+                                "Object_02",
+                                "可拖動",
+                                "no"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                      },
+                      "parameters": [
+                        "Object_02",
+                        "Resizable",
+                        "=",
+                        "192"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                      },
+                      "parameters": [
+                        "Object_02",
+                        "Resizable",
+                        "=",
+                        "192"
+                      ]
+                    }
                   ]
                 },
                 {
@@ -2735,6 +3412,51 @@
                         "Opacity",
                         "=",
                         "255"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "Last_Block",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "Score",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanVariable"
+                          },
+                          "parameters": [
+                            "Last_Block",
+                            "False",
+                            ""
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -2764,6 +3486,124 @@
                         "180"
                       ]
                     }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PosX"
+                          },
+                          "parameters": [
+                            "Object_03",
+                            "=",
+                            "1792"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PosY"
+                          },
+                          "parameters": [
+                            "Object_03",
+                            "=",
+                            "64"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "Score",
+                                ">",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "Object_03",
+                                "Object_03.X()",
+                                "Object_03.Y()",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "Score",
+                                "-",
+                                "100"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanVariable"
+                              },
+                              "parameters": [
+                                "Last_Block",
+                                "False",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "Score",
+                                "=",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ActivateBehavior"
+                              },
+                              "parameters": [
+                                "Object_03",
+                                "可拖動",
+                                "no"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
                   ]
                 },
                 {
@@ -2791,6 +3631,150 @@
                         "255"
                       ]
                     }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "Last_Block",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "Score",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanVariable"
+                          },
+                          "parameters": [
+                            "Last_Block",
+                            "False",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+                  },
+                  "parameters": [
+                    "Clear_Button",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Object_01",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Object_02",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Object_03",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Object_01",
+                    "1728",
+                    "640",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Object_02",
+                    "1760",
+                    "288",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Object_03",
+                    "1792",
+                    "64",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Score",
+                    "=",
+                    "1000"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "Last_Block",
+                    "True",
+                    ""
                   ]
                 }
               ]
@@ -2801,48 +3785,6 @@
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": []
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "MettreXY"
-              },
-              "parameters": [
-                "Object_03",
-                "=",
-                "1792",
-                "=",
-                "64"
-              ]
-            },
-            {
-              "type": {
-                "value": "MettreXY"
-              },
-              "parameters": [
-                "Object_02",
-                "=",
-                "1760",
-                "=",
-                "288"
-              ]
-            },
-            {
-              "type": {
-                "value": "MettreXY"
-              },
-              "parameters": [
-                "Object_01",
-                "=",
-                "1728",
-                "=",
-                "640"
-              ]
-            }
-          ]
         }
       ],
       "layers": [
@@ -2923,6 +3865,10 @@
         {
           "name": "Scale",
           "type": "ScalableCapability::ScalableBehavior"
+        },
+        {
+          "name": "Text",
+          "type": "TextContainerCapability::TextContainerBehavior"
         }
       ]
     }
