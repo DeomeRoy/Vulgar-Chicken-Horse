@@ -2629,7 +2629,6 @@
           "comment": "SET"
         },
         {
-          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [],
@@ -2725,12 +2724,29 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "BooleanVariable"
+                    "value": "BuiltinCommonInstructions::Or"
                   },
-                  "parameters": [
-                    "Building_Mode",
-                    "True",
-                    ""
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "Building_Mode",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+                      },
+                      "parameters": [
+                        "Clear_Button",
+                        ""
+                      ]
+                    }
                   ]
                 }
               ],
