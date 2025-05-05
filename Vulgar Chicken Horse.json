@@ -3224,54 +3224,6 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "Star",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Sprites\\Star.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 3,
-                            "y": 3
-                          },
-                          {
-                            "x": 179,
-                            "y": 3
-                          },
-                          {
-                            "x": 179,
-                            "y": 182
-                          },
-                          {
-                            "x": 3,
-                            "y": 182
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
               "name": "Unstar",
               "useMultipleDirections": false,
               "directions": [
@@ -3297,20 +3249,68 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 3,
-                            "y": 3
+                            "x": 4,
+                            "y": 0
                           },
                           {
-                            "x": 179,
-                            "y": 3
+                            "x": 180,
+                            "y": 0
                           },
                           {
-                            "x": 179,
-                            "y": 182
+                            "x": 180,
+                            "y": 178
                           },
                           {
-                            "x": 3,
-                            "y": 182
+                            "x": 4,
+                            "y": 178
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Star",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Sprites\\Star.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 4,
+                            "y": 0
+                          },
+                          {
+                            "x": 180,
+                            "y": 0
+                          },
+                          {
+                            "x": 180,
+                            "y": 178
+                          },
+                          {
+                            "x": 4,
+                            "y": 178
                           }
                         ]
                       ]
@@ -3500,54 +3500,6 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "Star",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Sprites\\Star.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 3,
-                            "y": 3
-                          },
-                          {
-                            "x": 179,
-                            "y": 3
-                          },
-                          {
-                            "x": 179,
-                            "y": 182
-                          },
-                          {
-                            "x": 3,
-                            "y": 182
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
               "name": "Unstar",
               "useMultipleDirections": false,
               "directions": [
@@ -3573,20 +3525,68 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 3,
-                            "y": 3
+                            "x": 4,
+                            "y": 0
                           },
                           {
-                            "x": 179,
-                            "y": 3
+                            "x": 180,
+                            "y": 0
                           },
                           {
-                            "x": 179,
-                            "y": 182
+                            "x": 180,
+                            "y": 178
                           },
                           {
-                            "x": 3,
-                            "y": 182
+                            "x": 4,
+                            "y": 178
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Star",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Sprites\\Star.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 4,
+                            "y": 0
+                          },
+                          {
+                            "x": 180,
+                            "y": 0
+                          },
+                          {
+                            "x": 180,
+                            "y": 178
+                          },
+                          {
+                            "x": 4,
+                            "y": 178
                           }
                         ]
                       ]
@@ -3608,54 +3608,6 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "Star",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Sprites\\Star.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 3,
-                            "y": 3
-                          },
-                          {
-                            "x": 179,
-                            "y": 3
-                          },
-                          {
-                            "x": 179,
-                            "y": 182
-                          },
-                          {
-                            "x": 3,
-                            "y": 182
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
               "name": "Unstar",
               "useMultipleDirections": false,
               "directions": [
@@ -3681,20 +3633,68 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 3,
-                            "y": 3
+                            "x": 4,
+                            "y": 0
                           },
                           {
-                            "x": 179,
-                            "y": 3
+                            "x": 180,
+                            "y": 0
                           },
                           {
-                            "x": 179,
-                            "y": 182
+                            "x": 180,
+                            "y": 178
                           },
                           {
-                            "x": 3,
-                            "y": 182
+                            "x": 4,
+                            "y": 178
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Star",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Sprites\\Star.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 4,
+                            "y": 0
+                          },
+                          {
+                            "x": 180,
+                            "y": 0
+                          },
+                          {
+                            "x": 180,
+                            "y": 178
+                          },
+                          {
+                            "x": 4,
+                            "y": 178
                           }
                         ]
                       ]
@@ -4581,11 +4581,29 @@
                     },
                     {
                       "type": {
-                        "value": "KeyFromTextReleased"
+                        "value": "BuiltinCommonInstructions::And"
                       },
-                      "parameters": [
-                        "",
-                        "\"q\""
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "KeyFromTextReleased"
+                          },
+                          "parameters": [
+                            "",
+                            "\"q\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "Level_Done",
+                            "False",
+                            ""
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -4621,21 +4639,39 @@
                   "subInstructions": [
                     {
                       "type": {
-                        "value": "BooleanVariable"
-                      },
-                      "parameters": [
-                        "Building_Mode",
-                        "True",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
                         "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
                       },
                       "parameters": [
                         "Clear_Button",
                         ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::And"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "Building_Mode",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "Level_Done",
+                            "False",
+                            ""
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -5732,6 +5768,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -5812,6 +5849,102 @@
                     "SwitchButton",
                     "",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "Building_Mode",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Score",
+                        ">=",
+                        "100"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "Star_1",
+                        "Animation",
+                        "=",
+                        "\"Star\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Score",
+                        ">=",
+                        "500"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "Star_2",
+                        "Animation",
+                        "=",
+                        "\"Star\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Score",
+                        ">=",
+                        "700"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "Star_3",
+                        "Animation",
+                        "=",
+                        "\"Star\""
+                      ]
+                    }
                   ]
                 }
               ]
