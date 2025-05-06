@@ -24,7 +24,7 @@
     "author": "",
     "windowWidth": 1920,
     "windowHeight": 1080,
-    "latestCompilationDirectory": "",
+    "latestCompilationDirectory": "C:\\Users\\user\\Downloads\\game",
     "maxFPS": 60,
     "minFPS": 20,
     "verticalSync": false,
@@ -590,7 +590,7 @@
       "title": "",
       "v": 209,
       "uiSettings": {
-        "grid": false,
+        "grid": true,
         "gridType": "rectangular",
         "gridWidth": 32,
         "gridHeight": 32,
@@ -598,8 +598,8 @@
         "gridOffsetY": 0,
         "gridColor": 10401023,
         "gridAlpha": 0.8,
-        "snap": false,
-        "zoomFactor": 0.45985214267363306,
+        "snap": true,
+        "zoomFactor": 0.4598521426736333,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -609,14 +609,14 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 1104,
+          "height": 1152,
           "keepRatio": true,
           "layer": "",
           "name": "Title_Image",
           "persistentUuid": "45b9f63d-93b2-414d-ac7c-5853833a68b9",
-          "width": 2089,
-          "x": -8,
-          "y": -8,
+          "width": 2240,
+          "x": 0,
+          "y": -32,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -631,8 +631,8 @@
           "name": "Start",
           "persistentUuid": "97e9a87f-39c3-4bfe-8436-8248a3cdb882",
           "width": 400,
-          "x": 112,
-          "y": 730,
+          "x": 368,
+          "y": 736,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -647,40 +647,8 @@
           "name": "Level",
           "persistentUuid": "d7caab19-09a9-4ffd-a8e7-fc5a17962892",
           "width": 400,
-          "x": 592,
-          "y": 730,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 0,
-          "height": 200,
-          "layer": "",
-          "name": "Setting",
-          "persistentUuid": "a8b07934-2877-487b-9a9d-4280896d3839",
-          "width": 400,
-          "x": 1072,
-          "y": 730,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 0,
-          "height": 200,
-          "layer": "",
-          "name": "Exit",
-          "persistentUuid": "1ccfe3b5-1c74-400c-a61b-052840f2a9b5",
-          "width": 400,
-          "x": 1552,
-          "y": 730,
+          "x": 992,
+          "y": 736,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -696,9 +664,25 @@
           "name": "Title_Text",
           "persistentUuid": "f0b708a8-4d7f-4088-9c60-4e5414fff313",
           "width": 1291,
-          "x": 407,
-          "y": 130,
+          "x": 320,
+          "y": 150,
           "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Operate",
+          "persistentUuid": "306de71f-084b-4d52-98ed-c529e0c1df8f",
+          "width": 0,
+          "x": 1659,
+          "y": 224,
+          "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -800,6 +784,48 @@
           "variables": [],
           "effects": [],
           "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "Operate",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "左鍵拖曳物件\nR鍵旋轉\nE鍵刪除\nQ鍵切換模式\n左右鍵移動\n空白鍵跳躍",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 80,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 5,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "左鍵拖曳物件\nR鍵旋轉\nE鍵刪除\nQ鍵切換模式\n左右鍵移動\n空白鍵跳躍",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 80,
+            "color": "0;0;0"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -822,6 +848,9 @@
           },
           {
             "objectName": "Title_Text"
+          },
+          {
+            "objectName": "Operate"
           }
         ]
       },
@@ -896,32 +925,6 @@
                   ]
                 }
               ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "SourisSurObjet"
-                  },
-                  "parameters": [
-                    "Exit",
-                    "",
-                    "",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Quit"
-                  },
-                  "parameters": [
-                    ""
-                  ]
-                }
-              ]
             }
           ]
         }
@@ -984,6 +987,14 @@
         {
           "name": "Resizable",
           "type": "ResizableCapability::ResizableBehavior"
+        },
+        {
+          "name": "Scale",
+          "type": "ScalableCapability::ScalableBehavior"
+        },
+        {
+          "name": "Text",
+          "type": "TextContainerCapability::TextContainerBehavior"
         }
       ]
     },
@@ -1007,7 +1018,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.707714287014667,
+        "zoomFactor": 1.089175118621004,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -1022,7 +1033,7 @@
           "layer": "",
           "name": "Title_Image",
           "persistentUuid": "45b9f63d-93b2-414d-ac7c-5853833a68b9",
-          "width": 2080,
+          "width": 2240,
           "x": 0,
           "y": 0,
           "zOrder": 1,
@@ -1034,12 +1045,12 @@
           "angle": 0,
           "customSize": true,
           "depth": 48,
-          "height": 96,
+          "height": 128,
           "keepRatio": true,
           "layer": "",
           "name": "Back",
           "persistentUuid": "b12f9178-0236-403b-968c-aa7405969439",
-          "width": 224,
+          "width": 256,
           "x": 64,
           "y": 160,
           "zOrder": 2,
@@ -1057,8 +1068,8 @@
           "name": "Level_1",
           "persistentUuid": "8c35605a-f096-466b-93ad-d14383447ba0",
           "width": 224,
-          "x": 288,
-          "y": 288,
+          "x": 352,
+          "y": 352,
           "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
@@ -1074,8 +1085,8 @@
           "name": "Level_2",
           "persistentUuid": "f6d62aff-9827-4adf-83f3-a5c9defe9c24",
           "width": 224,
-          "x": 544,
-          "y": 288,
+          "x": 672,
+          "y": 352,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1091,8 +1102,8 @@
           "name": "Level_3",
           "persistentUuid": "9c1c48d1-73e5-49a1-b6f7-b36f9c953f18",
           "width": 224,
-          "x": 800,
-          "y": 288,
+          "x": 992,
+          "y": 352,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
@@ -1668,7 +1679,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.5079575118131869,
+        "zoomFactor": 0.3411856023473547,
         "windowMask": false
       },
       "objectsGroups": [
@@ -1892,7 +1903,7 @@
           "layer": "",
           "name": "BlockBackground",
           "persistentUuid": "73df7387-7a97-4485-a67e-f9b5e07300b0",
-          "width": 384,
+          "width": 512,
           "x": 1696,
           "y": 0,
           "zOrder": 12,
@@ -1959,7 +1970,7 @@
           "layer": "",
           "name": "Floor2",
           "persistentUuid": "a558334e-0f56-419e-bef6-ef91c3d38589",
-          "width": 2144,
+          "width": 2272,
           "x": -32,
           "y": 1120,
           "zOrder": 18,
@@ -1993,7 +2004,7 @@
           "layer": "",
           "name": "Floor",
           "persistentUuid": "2896ce8d-0514-411e-8e09-303613a88d7e",
-          "width": 2080,
+          "width": 2208,
           "x": 0,
           "y": -32,
           "zOrder": 17,
@@ -2011,7 +2022,7 @@
           "name": "Floor",
           "persistentUuid": "e4348cbb-c146-462e-81c0-2b754823144c",
           "width": 32,
-          "x": 2080,
+          "x": 2208,
           "y": -32,
           "zOrder": 17,
           "numberProperties": [],
@@ -2286,7 +2297,6 @@
           "effects": [],
           "behaviors": [
             {
-              "isFolded": true,
               "name": "PlatformerObject",
               "type": "PlatformBehavior::PlatformerObjectBehavior",
               "ignoreDefaultControls": false,
