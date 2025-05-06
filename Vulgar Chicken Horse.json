@@ -599,7 +599,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.5250860067782502,
+        "zoomFactor": 0.45985214267363306,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -4595,7 +4595,6 @@
           "comment": "SET"
         },
         {
-          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [],
@@ -4816,13 +4815,11 @@
           ]
         },
         {
-          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [],
           "events": [
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -4918,7 +4915,6 @@
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -5103,7 +5099,6 @@
                   ]
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -5250,7 +5245,6 @@
                   ]
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -5323,7 +5317,6 @@
                   ]
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -5497,7 +5490,6 @@
                   ]
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -5570,7 +5562,6 @@
                   ]
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -5716,7 +5707,6 @@
                   ]
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -6412,7 +6402,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.5079575118131883,
+        "zoomFactor": 0.5079575118131897,
         "windowMask": false
       },
       "objectsGroups": [
@@ -6635,7 +6625,6 @@
           "customSize": true,
           "depth": 1,
           "height": 1120,
-          "keepRatio": true,
           "layer": "",
           "name": "BlockBackground",
           "persistentUuid": "73df7387-7a97-4485-a67e-f9b5e07300b0",
@@ -7006,8 +6995,7 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 192,
-          "keepRatio": true,
+          "height": 160,
           "layer": "",
           "name": "Spring",
           "persistentUuid": "cf95d2c9-73c3-4c08-bda9-c9e4f8d0b2f4",
@@ -8159,7 +8147,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "100",
+          "string": "300",
           "font": "",
           "textAlignment": "center",
           "characterSize": 50,
@@ -8182,7 +8170,7 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "100",
+            "text": "300",
             "font": "",
             "textAlignment": "center",
             "verticalTextAlignment": "top",
@@ -8201,7 +8189,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "500",
+          "string": "600",
           "font": "",
           "textAlignment": "center",
           "characterSize": 50,
@@ -8224,7 +8212,7 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "500",
+            "text": "600",
             "font": "",
             "textAlignment": "center",
             "verticalTextAlignment": "top",
@@ -8243,7 +8231,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "700",
+          "string": "800",
           "font": "",
           "textAlignment": "center",
           "characterSize": 50,
@@ -8266,7 +8254,7 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "700",
+            "text": "800",
             "font": "",
             "textAlignment": "center",
             "verticalTextAlignment": "top",
@@ -8794,17 +8782,17 @@
           "effects": [],
           "behaviors": [
             {
-              "canBeGrabbed": true,
               "isFolded": true,
               "name": "Platform",
-              "platformType": "NormalPlatform",
               "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": true,
+              "platformType": "NormalPlatform",
               "yGrabOffset": 0
             },
             {
-              "checkCollisionMask": true,
               "name": "可拖動",
-              "type": "DraggableBehavior::Draggable"
+              "type": "DraggableBehavior::Draggable",
+              "checkCollisionMask": true
             }
           ],
           "animations": [
@@ -8819,54 +8807,6 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "材料包\\Spring.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 268,
-                            "y": 0
-                          },
-                          {
-                            "x": 268,
-                            "y": 512
-                          },
-                          {
-                            "x": 0,
-                            "y": 512
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Pressure",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "材料包\\Spring_Pressure.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -9044,7 +8984,7 @@
               "parameters": [
                 "Score",
                 "=",
-                "1000"
+                "1200"
               ]
             }
           ]
@@ -9161,7 +9101,6 @@
           ]
         },
         {
-          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -9355,6 +9294,72 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "Level_Done",
+                    "=",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AjoutObjConcern"
+                  },
+                  "parameters": [
+                    "",
+                    "Level_Block_Group"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Object_01",
+                    "可拖動",
+                    "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Object_02",
+                    "可拖動",
+                    "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Object_03",
+                    "可拖動",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Spring",
+                    "可拖動",
+                    ""
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -9429,7 +9434,6 @@
           "comment": "SET"
         },
         {
-          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [],
@@ -9650,7 +9654,6 @@
           ]
         },
         {
-          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [],
@@ -10000,6 +10003,87 @@
               "conditions": [],
               "actions": [],
               "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "Last_Block",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AjoutObjConcern"
+                      },
+                      "parameters": [
+                        "",
+                        "Level_Block_Group"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "Object_01",
+                        "可拖動",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "Object_02",
+                        "可拖動",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "Object_03",
+                        "可拖動",
+                        "yes"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AjoutObjConcern"
+                      },
+                      "parameters": [
+                        "",
+                        "Level_Block_Group"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ActivateBehavior"
+                      },
+                      "parameters": [
+                        "Spring",
+                        "可拖動",
+                        "yes"
+                      ]
+                    }
+                  ]
+                },
                 {
                   "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
@@ -10422,7 +10506,7 @@
                         "Spring",
                         "Resizable",
                         "=",
-                        "192"
+                        "160"
                       ]
                     },
                     {
@@ -10807,6 +10891,7 @@
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -10942,7 +11027,6 @@
                   ]
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -11010,6 +11094,96 @@
                             ""
                           ]
                         }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Spring",
+                        "Player",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "Spring",
+                        "\"SpringJump\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::SimulateJumpKey"
+                      },
+                      "parameters": [
+                        "Player",
+                        "PlatformerObject"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::JumpSpeed"
+                      },
+                      "parameters": [
+                        "Player",
+                        "PlatformerObject",
+                        "=",
+                        "1600"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Spring",
+                        "Player",
+                        "",
+                        "",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::MaxFallingSpeed"
+                      },
+                      "parameters": [
+                        "Player",
+                        "PlatformerObject",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlatformBehavior::JumpSpeed"
+                      },
+                      "parameters": [
+                        "Player",
+                        "PlatformerObject",
+                        "=",
+                        "600"
                       ]
                     }
                   ]
@@ -11121,7 +11295,7 @@
                   "parameters": [
                     "Score",
                     "=",
-                    "1000"
+                    "1200"
                   ]
                 },
                 {
@@ -11230,7 +11404,6 @@
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -11374,7 +11547,7 @@
                       "parameters": [
                         "Score",
                         ">=",
-                        "100"
+                        "300"
                       ]
                     }
                   ],
@@ -11402,7 +11575,7 @@
                       "parameters": [
                         "Score",
                         ">=",
-                        "500"
+                        "600"
                       ]
                     }
                   ],
@@ -11430,7 +11603,7 @@
                       "parameters": [
                         "Score",
                         ">=",
-                        "700"
+                        "800"
                       ]
                     }
                   ],
@@ -11496,7 +11669,7 @@
                   },
                   "parameters": [
                     "",
-                    "\"Level_01\"",
+                    "\"Level_02\"",
                     ""
                   ]
                 }
@@ -11590,7 +11763,7 @@
           "isLocked": false,
           "name": "Panel",
           "renderingType": "",
-          "visibility": false,
+          "visibility": true,
           "cameras": [],
           "effects": [
             {
