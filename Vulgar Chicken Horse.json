@@ -1,7 +1,7 @@
 {
   "firstLayout": "Title",
   "gdVersion": {
-    "build": 228,
+    "build": 230,
     "major": 5,
     "minor": 5,
     "revision": 0
@@ -605,6 +605,8 @@
       "effects": [],
       "behaviors": [
         {
+          "name": "PlatformerObject",
+          "type": "PlatformBehavior::PlatformerObjectBehavior",
           "acceleration": 0,
           "canGoDownFromJumpthru": false,
           "canGrabPlatforms": false,
@@ -617,9 +619,7 @@
           "ladderClimbingSpeed": 0,
           "maxFallingSpeed": 0,
           "maxSpeed": 0,
-          "name": "PlatformerObject",
           "slopeMaxAngle": 0,
-          "type": "PlatformBehavior::PlatformerObjectBehavior",
           "useLegacyTrajectory": false,
           "xGrabTolerance": 0,
           "yGrabOffset": 0
@@ -735,7 +735,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.44485159988866513,
+        "zoomFactor": 0.3895856273827287,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -767,7 +767,7 @@
           "name": "Start",
           "persistentUuid": "97e9a87f-39c3-4bfe-8436-8248a3cdb882",
           "width": 400,
-          "x": 368,
+          "x": 338,
           "y": 736,
           "zOrder": 2,
           "numberProperties": [],
@@ -800,7 +800,7 @@
           "name": "Title_Text",
           "persistentUuid": "f0b708a8-4d7f-4088-9c60-4e5414fff313",
           "width": 1291,
-          "x": 320,
+          "x": 250,
           "y": 150,
           "zOrder": 3,
           "numberProperties": [],
@@ -816,8 +816,8 @@
           "name": "Operate",
           "persistentUuid": "306de71f-084b-4d52-98ed-c529e0c1df8f",
           "width": 0,
-          "x": 1659,
-          "y": 224,
+          "x": 1546,
+          "y": 67,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -948,10 +948,10 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "左鍵拖曳物件\nR鍵旋轉\nE鍵刪除\nQ鍵切換模式\n左右鍵移動\n空白鍵跳躍",
+          "string": "鍵盤操作\n左鍵拖曳物件\nR鍵旋轉/E鍵刪除\nQ鍵切換模式\n左右鍵移動\n空白鍵跳躍\n搖桿操作\n左搖桿為主\n建造模式　　|操作模式\nＬＴ切換模式|A鍵跳躍\nＬＢ清空場地|\nＲＴ旋轉物件|\nＲＢ刪除物件|\n\n",
           "font": "",
           "textAlignment": "left",
-          "characterSize": 80,
+          "characterSize": 65,
           "color": {
             "b": 0,
             "g": 0,
@@ -971,11 +971,11 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "左鍵拖曳物件\nR鍵旋轉\nE鍵刪除\nQ鍵切換模式\n左右鍵移動\n空白鍵跳躍",
+            "text": "鍵盤操作\n左鍵拖曳物件\nR鍵旋轉/E鍵刪除\nQ鍵切換模式\n左右鍵移動\n空白鍵跳躍\n搖桿操作\n左搖桿為主\n建造模式　　|操作模式\nＬＴ切換模式|A鍵跳躍\nＬＢ清空場地|\nＲＴ旋轉物件|\nＲＢ刪除物件|\n\n",
             "font": "",
             "textAlignment": "left",
             "verticalTextAlignment": "top",
-            "characterSize": 80,
+            "characterSize": 65,
             "color": "0;0;0"
           }
         }
@@ -1369,12 +1369,24 @@
       ],
       "behaviorsSharedData": [
         {
+          "name": "Animation",
+          "type": "AnimatableCapability::AnimatableBehavior"
+        },
+        {
           "name": "Effect",
           "type": "EffectCapability::EffectBehavior"
         },
         {
+          "name": "Flippable",
+          "type": "FlippableCapability::FlippableBehavior"
+        },
+        {
           "name": "Opacity",
           "type": "OpacityCapability::OpacityBehavior"
+        },
+        {
+          "name": "PlatformerObject",
+          "type": "PlatformBehavior::PlatformerObjectBehavior"
         },
         {
           "name": "Resizable",
@@ -1539,6 +1551,7 @@
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "Back",
           "type": "PanelSpriteButton::PanelSpriteButton",
+          "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [],
@@ -1623,6 +1636,7 @@
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "Level_1",
           "type": "PanelSpriteButton::PanelSpriteButton",
+          "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [],
@@ -1707,6 +1721,7 @@
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "Level_2",
           "type": "PanelSpriteButton::PanelSpriteButton",
+          "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [],
@@ -1791,6 +1806,7 @@
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "Level_3",
           "type": "PanelSpriteButton::PanelSpriteButton",
+          "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [],
@@ -2344,6 +2360,10 @@
       ],
       "behaviorsSharedData": [
         {
+          "name": "Animation",
+          "type": "AnimatableCapability::AnimatableBehavior"
+        },
+        {
           "name": "Effect",
           "type": "EffectCapability::EffectBehavior"
         },
@@ -2354,6 +2374,10 @@
         {
           "name": "Opacity",
           "type": "OpacityCapability::OpacityBehavior"
+        },
+        {
+          "name": "PlatformerObject",
+          "type": "PlatformBehavior::PlatformerObjectBehavior"
         },
         {
           "name": "Resizable",
@@ -3502,6 +3526,7 @@
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "SwitchButton",
           "type": "PanelSpriteButton::PanelSpriteButton",
+          "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [],
@@ -3905,6 +3930,7 @@
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "Clear_Button",
           "type": "PanelSpriteButton::PanelSpriteButton",
+          "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [],
@@ -4492,6 +4518,7 @@
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "BackToTitle",
           "type": "PanelSpriteButton::PanelSpriteButton",
+          "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [],
@@ -4576,6 +4603,7 @@
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "ReStart",
           "type": "PanelSpriteButton::PanelSpriteButton",
+          "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [],
@@ -4660,6 +4688,7 @@
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "NextLevel",
           "type": "PanelSpriteButton::PanelSpriteButton",
+          "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [],
@@ -5900,7 +5929,6 @@
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -9430,6 +9458,16 @@
           "effects": [],
           "behaviors": [
             {
+              "name": "PlatformerGamepadMapper",
+              "type": "Gamepads::PlatformerGamepadMapper",
+              "PlatformerCharacter": "PlatformerObject",
+              "GamepadIdentifier": 1,
+              "UseArrows": true,
+              "UseLeftStick": true,
+              "UseRightStick": false,
+              "JumpButton": "A or Cross"
+            },
+            {
               "isFolded": true,
               "name": "PlatformerObject",
               "type": "PlatformBehavior::PlatformerObjectBehavior",
@@ -9902,6 +9940,7 @@
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "SwitchButton",
           "type": "PanelSpriteButton::PanelSpriteButton",
+          "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [],
@@ -10305,6 +10344,7 @@
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "Clear_Button",
           "type": "PanelSpriteButton::PanelSpriteButton",
+          "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [],
@@ -10892,6 +10932,7 @@
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "BackToTitle",
           "type": "PanelSpriteButton::PanelSpriteButton",
+          "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [],
@@ -10976,6 +11017,7 @@
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "ReStart",
           "type": "PanelSpriteButton::PanelSpriteButton",
+          "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [],
@@ -11060,6 +11102,7 @@
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "NextLevel",
           "type": "PanelSpriteButton::PanelSpriteButton",
+          "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [],
@@ -11517,7 +11560,6 @@
           ]
         },
         {
-          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -12102,36 +12144,36 @@
                           ]
                         }
                       ]
-                    }
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Gamepads::C_Button_pressed"
-                  },
-                  "parameters": [
-                    "",
-                    "1",
-                    "\"LB\"",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::And"
-                  },
-                  "parameters": [],
-                  "subInstructions": [
+                    },
                     {
                       "type": {
-                        "value": "CollisionNP"
+                        "value": "BuiltinCommonInstructions::And"
                       },
-                      "parameters": [
-                        "NewSprite",
-                        "Clear_Button",
-                        "",
-                        "",
-                        ""
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "NewSprite",
+                            "Clear_Button",
+                            "",
+                            "",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Gamepads::C_Button_pressed"
+                          },
+                          "parameters": [
+                            "",
+                            "1",
+                            "\"A\"",
+                            ""
+                          ]
+                        }
                       ]
                     },
                     {
@@ -12141,7 +12183,7 @@
                       "parameters": [
                         "",
                         "1",
-                        "\"A\"",
+                        "\"LB\"",
                         ""
                       ]
                     }
@@ -12216,7 +12258,6 @@
           "actions": [],
           "events": [
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -12394,7 +12435,6 @@
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -12709,7 +12749,6 @@
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [],
@@ -13602,6 +13641,7 @@
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -13737,6 +13777,7 @@
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -15389,6 +15430,16 @@
                                 "-",
                                 "100"
                               ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanVariable"
+                              },
+                              "parameters": [
+                                "Last_Block",
+                                "True",
+                                ""
+                              ]
                             }
                           ],
                           "events": [
@@ -15565,6 +15616,16 @@
                                 "-",
                                 "100"
                               ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanVariable"
+                              },
+                              "parameters": [
+                                "Last_Block",
+                                "True",
+                                ""
+                              ]
                             }
                           ],
                           "events": [
@@ -15740,6 +15801,16 @@
                                 "-",
                                 "100"
                               ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanVariable"
+                              },
+                              "parameters": [
+                                "Last_Block",
+                                "True",
+                                ""
+                              ]
                             }
                           ],
                           "events": [
@@ -15913,7 +15984,17 @@
                               "parameters": [
                                 "Score",
                                 "-",
-                                "100"
+                                "300"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanVariable"
+                              },
+                              "parameters": [
+                                "Last_Block",
+                                "True",
+                                ""
                               ]
                             }
                           ],
@@ -15950,7 +16031,7 @@
                                   "parameters": [
                                     "Score",
                                     "+",
-                                    "100"
+                                    "300"
                                   ]
                                 }
                               ]
@@ -16128,6 +16209,10 @@
           "type": "PlatformBehavior::PlatformBehavior"
         },
         {
+          "name": "PlatformerGamepadMapper",
+          "type": "Gamepads::PlatformerGamepadMapper"
+        },
+        {
           "name": "PlatformerObject",
           "type": "PlatformBehavior::PlatformerObjectBehavior"
         },
@@ -16165,7 +16250,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.4913877545329522,
+        "zoomFactor": 0.4598521426736497,
         "windowMask": false
       },
       "objectsGroups": [
@@ -16837,6 +16922,285 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "Mouse",
+          "name": "NewSprite",
+          "persistentUuid": "f87043f8-7523-428e-9cfe-ac5744ce987a",
+          "width": 0,
+          "x": 1280,
+          "y": 384,
+          "zOrder": 36,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 180,
+          "customSize": true,
+          "depth": 1,
+          "height": 64,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Trap",
+          "persistentUuid": "3a8c6965-9d11-4d31-bc7e-6ea847bdc3d7",
+          "width": 64,
+          "x": 1440,
+          "y": 608,
+          "zOrder": 35,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 180,
+          "customSize": true,
+          "depth": 1,
+          "height": 64,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Trap",
+          "persistentUuid": "bb2936dc-4acc-4c13-8032-7cc8a40e1d06",
+          "width": 64,
+          "x": 1376,
+          "y": 608,
+          "zOrder": 35,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 180,
+          "customSize": true,
+          "depth": 1,
+          "height": 64,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Trap",
+          "persistentUuid": "cd4fdc9f-50af-402d-9ed8-ec6c2ab8139d",
+          "width": 64,
+          "x": 1312,
+          "y": 608,
+          "zOrder": 35,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 180,
+          "customSize": true,
+          "depth": 1,
+          "flippedY": true,
+          "height": 64,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Trap",
+          "persistentUuid": "926e1949-363a-4002-a93c-28c7246700d7",
+          "width": 64,
+          "x": 864,
+          "y": 480,
+          "zOrder": 35,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 180,
+          "customSize": true,
+          "depth": 1,
+          "flippedY": true,
+          "height": 64,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Trap",
+          "persistentUuid": "bf5d4365-8962-4fa1-be2a-18cb63f4ec18",
+          "width": 64,
+          "x": 928,
+          "y": 480,
+          "zOrder": 35,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 180,
+          "customSize": true,
+          "depth": 1,
+          "flippedY": true,
+          "height": 64,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Trap",
+          "persistentUuid": "96c5994e-429b-4e1e-bcba-9bce3af19d0f",
+          "width": 64,
+          "x": 992,
+          "y": 480,
+          "zOrder": 35,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 180,
+          "customSize": true,
+          "depth": 1,
+          "flippedY": true,
+          "height": 64,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Trap",
+          "persistentUuid": "4a466016-7ef2-4772-8e9f-c658c885aa12",
+          "width": 64,
+          "x": 1056,
+          "y": 480,
+          "zOrder": 35,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 180,
+          "customSize": true,
+          "depth": 1,
+          "flippedY": true,
+          "height": 64,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Trap",
+          "persistentUuid": "c09640d8-0979-49a4-80d7-8b9f8c25aa5a",
+          "width": 64,
+          "x": 608,
+          "y": 480,
+          "zOrder": 35,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 180,
+          "customSize": true,
+          "depth": 1,
+          "flippedY": true,
+          "height": 64,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Trap",
+          "persistentUuid": "76bd5bd4-2ee6-4f7e-849a-5de8112d975f",
+          "width": 64,
+          "x": 672,
+          "y": 480,
+          "zOrder": 35,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 180,
+          "customSize": true,
+          "depth": 1,
+          "flippedY": true,
+          "height": 64,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Trap",
+          "persistentUuid": "501c741c-e838-43a4-954e-22fecfd7bfd2",
+          "width": 64,
+          "x": 736,
+          "y": 480,
+          "zOrder": 35,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 180,
+          "customSize": true,
+          "depth": 1,
+          "flippedY": true,
+          "height": 64,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Trap",
+          "persistentUuid": "fa273b58-3dea-4f31-b4a3-89808cb52258",
+          "width": 64,
+          "x": 800,
+          "y": 480,
+          "zOrder": 35,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 180,
+          "customSize": true,
+          "depth": 1,
+          "height": 64,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Trap",
+          "persistentUuid": "bdeaeb89-31ba-4c64-b936-61113c3f0181",
+          "width": 64,
+          "x": 128,
+          "y": 608,
+          "zOrder": 35,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 180,
+          "customSize": true,
+          "depth": 1,
+          "height": 64,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Trap",
+          "persistentUuid": "69df05d5-6591-46bd-b94d-71cc2095fb6e",
+          "width": 64,
+          "x": 192,
+          "y": 608,
+          "zOrder": 35,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 180,
+          "customSize": true,
+          "depth": 1,
+          "height": 64,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Trap",
+          "persistentUuid": "2b3b5454-467b-48c1-8427-d116b70f1428",
+          "width": 64,
+          "x": 256,
+          "y": 608,
+          "zOrder": 35,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 180,
+          "customSize": true,
+          "depth": 1,
+          "height": 64,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Trap",
+          "persistentUuid": "cf4c36ea-8b22-4b0f-9843-307edfa3e49b",
+          "width": 64,
+          "x": 320,
+          "y": 608,
+          "zOrder": 35,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -16868,6 +17232,16 @@
           "variables": [],
           "effects": [],
           "behaviors": [
+            {
+              "name": "PlatformerGamepadMapper",
+              "type": "Gamepads::PlatformerGamepadMapper",
+              "PlatformerCharacter": "PlatformerObject",
+              "GamepadIdentifier": 1,
+              "UseArrows": true,
+              "UseLeftStick": true,
+              "UseRightStick": false,
+              "JumpButton": "A or Cross"
+            },
             {
               "isFolded": true,
               "name": "PlatformerObject",
@@ -17341,6 +17715,7 @@
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "SwitchButton",
           "type": "PanelSpriteButton::PanelSpriteButton",
+          "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [],
@@ -17433,7 +17808,13 @@
           "topMargin": 0,
           "type": "PanelSpriteObject::PanelSprite",
           "width": 256,
-          "variables": [],
+          "variables": [
+            {
+              "name": "On_Pick",
+              "type": "boolean",
+              "value": false
+            }
+          ],
           "effects": [],
           "behaviors": [
             {
@@ -17463,7 +17844,13 @@
           "topMargin": 0,
           "type": "PanelSpriteObject::PanelSprite",
           "width": 128,
-          "variables": [],
+          "variables": [
+            {
+              "name": "On_Pick",
+              "type": "boolean",
+              "value": false
+            }
+          ],
           "effects": [],
           "behaviors": [
             {
@@ -17497,7 +17884,13 @@
           "name": "Object_02",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "On_Pick",
+              "type": "boolean",
+              "value": false
+            }
+          ],
           "effects": [],
           "behaviors": [
             {
@@ -17726,6 +18119,7 @@
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "Clear_Button",
           "type": "PanelSpriteButton::PanelSpriteButton",
+          "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [],
@@ -17978,7 +18372,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "300",
+          "string": "500",
           "font": "",
           "textAlignment": "center",
           "characterSize": 50,
@@ -18001,7 +18395,7 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "300",
+            "text": "500",
             "font": "",
             "textAlignment": "center",
             "verticalTextAlignment": "top",
@@ -18020,7 +18414,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "600",
+          "string": "1000",
           "font": "",
           "textAlignment": "center",
           "characterSize": 50,
@@ -18043,7 +18437,7 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "600",
+            "text": "1000",
             "font": "",
             "textAlignment": "center",
             "verticalTextAlignment": "top",
@@ -18062,7 +18456,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "800",
+          "string": "1300",
           "font": "",
           "textAlignment": "center",
           "characterSize": 50,
@@ -18085,7 +18479,7 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "800",
+            "text": "1300",
             "font": "",
             "textAlignment": "center",
             "verticalTextAlignment": "top",
@@ -18313,6 +18707,7 @@
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "BackToTitle",
           "type": "PanelSpriteButton::PanelSpriteButton",
+          "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [],
@@ -18397,6 +18792,7 @@
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "ReStart",
           "type": "PanelSpriteButton::PanelSpriteButton",
+          "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [],
@@ -18481,6 +18877,7 @@
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "NextLevel",
           "type": "PanelSpriteButton::PanelSpriteButton",
+          "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [],
@@ -18609,7 +19006,13 @@
           "name": "Spring",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "On_Pick",
+              "type": "boolean",
+              "value": false
+            }
+          ],
           "effects": [],
           "behaviors": [
             {
@@ -18879,7 +19282,7 @@
               "parameters": [
                 "Score",
                 "=",
-                "1200"
+                "1800"
               ]
             }
           ]
@@ -19121,11 +19524,31 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "KeyPressed"
+                    "value": "BuiltinCommonInstructions::Or"
                   },
-                  "parameters": [
-                    "",
-                    "Left"
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "KeyPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "Left"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Gamepads::C_Axis_pushed"
+                      },
+                      "parameters": [
+                        "",
+                        "1",
+                        "\"Left\"",
+                        "\"Left\"",
+                        ""
+                      ]
+                    }
                   ]
                 }
               ],
@@ -19158,11 +19581,31 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "KeyPressed"
+                    "value": "BuiltinCommonInstructions::Or"
                   },
-                  "parameters": [
-                    "",
-                    "Right"
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "KeyPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "Right"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Gamepads::C_Axis_pushed"
+                      },
+                      "parameters": [
+                        "",
+                        "1",
+                        "\"Left\"",
+                        "\"Right\"",
+                        ""
+                      ]
+                    }
                   ]
                 }
               ],
@@ -19292,34 +19735,14 @@
           "conditions": [
             {
               "type": {
-                "value": "BuiltinCommonInstructions::Or"
+                "value": "CollisionNP"
               },
-              "parameters": [],
-              "subInstructions": [
-                {
-                  "type": {
-                    "value": "CollisionNP"
-                  },
-                  "parameters": [
-                    "Player",
-                    "Floor2",
-                    "=",
-                    "",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "CollisionNP"
-                  },
-                  "parameters": [
-                    "Player",
-                    "Trap",
-                    "",
-                    "",
-                    ""
-                  ]
-                }
+              "parameters": [
+                "Player",
+                "Floor2",
+                "=",
+                "",
+                ""
               ]
             }
           ],
@@ -19332,6 +19755,45 @@
                 "Building_Mode",
                 "True",
                 ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Player",
+                "Trap",
+                "=",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "MettreX"
+              },
+              "parameters": [
+                "Player",
+                "=",
+                "1056"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreY"
+              },
+              "parameters": [
+                "Player",
+                "=",
+                "837"
               ]
             }
           ]
@@ -19358,22 +19820,69 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "MouseButtonFromTextReleased"
+                    "value": "BuiltinCommonInstructions::Or"
                   },
-                  "parameters": [
-                    "",
-                    "\"Left\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SourisSurObjet"
-                  },
-                  "parameters": [
-                    "ExitButton",
-                    "",
-                    "",
-                    ""
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::And"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "MouseButtonFromTextReleased"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Left\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SourisSurObjet"
+                          },
+                          "parameters": [
+                            "ExitButton",
+                            "",
+                            "",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::And"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "NewSprite",
+                            "ExitButton",
+                            "",
+                            "",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Gamepads::C_Button_pressed"
+                          },
+                          "parameters": [
+                            "",
+                            "1",
+                            "\"A\"",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
                   ]
                 }
               ],
@@ -19433,6 +19942,17 @@
                             ""
                           ]
                         }
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Gamepads::C_Button_pressed"
+                      },
+                      "parameters": [
+                        "",
+                        "1",
+                        "\"LT\"",
+                        "\"Up\""
                       ]
                     }
                   ]
@@ -19501,6 +20021,48 @@
                             ""
                           ]
                         }
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::And"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "NewSprite",
+                            "Clear_Button",
+                            "",
+                            "",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Gamepads::C_Button_pressed"
+                          },
+                          "parameters": [
+                            "",
+                            "1",
+                            "\"A\"",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Gamepads::C_Button_pressed"
+                      },
+                      "parameters": [
+                        "",
+                        "1",
+                        "\"LB\"",
+                        ""
                       ]
                     }
                   ]
@@ -19574,17 +20136,41 @@
           "actions": [],
           "events": [
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "value": "KeyFromTextReleased"
+                    "value": "BuiltinCommonInstructions::Or"
                   },
-                  "parameters": [
-                    "",
-                    "\"r\""
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "KeyFromTextReleased"
+                      },
+                      "parameters": [
+                        "",
+                        "\"r\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Gamepads::C_Button_pressed"
+                      },
+                      "parameters": [
+                        "",
+                        "1",
+                        "\"RT\"",
+                        ""
+                      ]
+                    }
                   ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
                 }
               ],
               "actions": [],
@@ -19594,11 +20180,30 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "DraggableBehavior::Dragged"
+                        "value": "BuiltinCommonInstructions::Or"
                       },
-                      "parameters": [
-                        "Object_01",
-                        "可拖動"
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "DraggableBehavior::Dragged"
+                          },
+                          "parameters": [
+                            "Object_01",
+                            "可拖動"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Object_01",
+                            "On_Pick",
+                            "True",
+                            ""
+                          ]
+                        }
                       ]
                     }
                   ],
@@ -19620,11 +20225,30 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "DraggableBehavior::Dragged"
+                        "value": "BuiltinCommonInstructions::Or"
                       },
-                      "parameters": [
-                        "Object_02",
-                        "可拖動"
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "DraggableBehavior::Dragged"
+                          },
+                          "parameters": [
+                            "Object_02",
+                            "可拖動"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Object_02",
+                            "On_Pick",
+                            "True",
+                            ""
+                          ]
+                        }
                       ]
                     }
                   ],
@@ -19646,11 +20270,30 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "DraggableBehavior::Dragged"
+                        "value": "BuiltinCommonInstructions::Or"
                       },
-                      "parameters": [
-                        "Object_03",
-                        "可拖動"
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "DraggableBehavior::Dragged"
+                          },
+                          "parameters": [
+                            "Object_03",
+                            "可拖動"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Object_03",
+                            "On_Pick",
+                            "True",
+                            ""
+                          ]
+                        }
                       ]
                     }
                   ],
@@ -19670,16 +20313,34 @@
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "value": "KeyFromTextReleased"
+                    "value": "BuiltinCommonInstructions::Or"
                   },
-                  "parameters": [
-                    "",
-                    "\"e\""
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "KeyFromTextReleased"
+                      },
+                      "parameters": [
+                        "",
+                        "\"e\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Gamepads::C_Button_pressed"
+                      },
+                      "parameters": [
+                        "",
+                        "1",
+                        "\"RB\"",
+                        ""
+                      ]
+                    }
                   ]
                 }
               ],
@@ -19719,6 +20380,39 @@
                           "parameters": [
                             "Object_03",
                             "可拖動"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Object_01",
+                            "On_Pick",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Object_02",
+                            "On_Pick",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Object_03",
+                            "On_Pick",
+                            "True",
+                            ""
                           ]
                         }
                       ]
@@ -19769,11 +20463,30 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "DraggableBehavior::Dragged"
+                        "value": "BuiltinCommonInstructions::Or"
                       },
-                      "parameters": [
-                        "Spring",
-                        "可拖動"
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "DraggableBehavior::Dragged"
+                          },
+                          "parameters": [
+                            "Spring",
+                            "可拖動"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Spring",
+                            "On_Pick",
+                            "True",
+                            ""
+                          ]
+                        }
                       ]
                     }
                   ],
@@ -20942,6 +21655,7 @@
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -21110,10 +21824,70 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+                      },
+                      "parameters": [
+                        "Clear_Button",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Gamepads::C_Button_pressed"
+                      },
+                      "parameters": [
+                        "",
+                        "1",
+                        "\"LB\"",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::And"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "NewSprite",
+                            "Clear_Button",
+                            "",
+                            "",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Gamepads::C_Button_pressed"
+                          },
+                          "parameters": [
+                            "",
+                            "1",
+                            "\"A\"",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
                   },
                   "parameters": [
-                    "Clear_Button",
+                    "Level_Done",
+                    "=",
                     ""
                   ]
                 }
@@ -21210,7 +21984,7 @@
                   "parameters": [
                     "Score",
                     "=",
-                    "1200"
+                    "1800"
                   ]
                 },
                 {
@@ -21543,11 +22317,60 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+                    "value": "BuiltinCommonInstructions::Or"
                   },
-                  "parameters": [
-                    "BackToTitle",
-                    ""
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+                      },
+                      "parameters": [
+                        "BackToTitle",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::And"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "Level_Done",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Gamepads::C_Button_pressed"
+                          },
+                          "parameters": [
+                            "",
+                            "1",
+                            "\"A\"",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "NewSprite",
+                            "BackToTitle",
+                            "",
+                            "",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
                   ]
                 }
               ],
@@ -21569,11 +22392,60 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+                    "value": "BuiltinCommonInstructions::Or"
                   },
-                  "parameters": [
-                    "ReStart",
-                    ""
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+                      },
+                      "parameters": [
+                        "ReStart",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::And"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "Level_Done",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Gamepads::C_Button_pressed"
+                          },
+                          "parameters": [
+                            "",
+                            "1",
+                            "\"A\"",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "NewSprite",
+                            "ReStart",
+                            "",
+                            "",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
                   ]
                 }
               ],
@@ -21591,16 +22463,64 @@
               ]
             },
             {
-              "disabled": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+                    "value": "BuiltinCommonInstructions::Or"
                   },
-                  "parameters": [
-                    "NextLevel",
-                    ""
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+                      },
+                      "parameters": [
+                        "NextLevel",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::And"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "Level_Done",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Gamepads::C_Button_pressed"
+                          },
+                          "parameters": [
+                            "",
+                            "1",
+                            "\"A\"",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "NewSprite",
+                            "NextLevel",
+                            "",
+                            "",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
                   ]
                 }
               ],
@@ -21613,6 +22533,1418 @@
                     "",
                     "\"Level_01\"",
                     ""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": ""
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "Building_Mode",
+                "True",
+                ""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Gamepads::C_Axis_pushed"
+                  },
+                  "parameters": [
+                    "",
+                    "1",
+                    "\"Left\"",
+                    "\"Up\"",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PosY"
+                  },
+                  "parameters": [
+                    "NewSprite",
+                    ">=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "MettreY"
+                  },
+                  "parameters": [
+                    "NewSprite",
+                    "-",
+                    "10"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Object_01",
+                        "On_Pick",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MettreY"
+                      },
+                      "parameters": [
+                        "Object_01",
+                        "-",
+                        "10"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Object_02",
+                        "On_Pick",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MettreY"
+                      },
+                      "parameters": [
+                        "Object_02",
+                        "-",
+                        "10"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Object_03",
+                        "On_Pick",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MettreY"
+                      },
+                      "parameters": [
+                        "Object_03",
+                        "-",
+                        "10"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Spring",
+                        "On_Pick",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MettreY"
+                      },
+                      "parameters": [
+                        "Spring",
+                        "-",
+                        "10"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Gamepads::C_Axis_pushed"
+                  },
+                  "parameters": [
+                    "",
+                    "1",
+                    "\"Left\"",
+                    "\"Down\"",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PosY"
+                  },
+                  "parameters": [
+                    "NewSprite",
+                    "<=",
+                    "1080"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "MettreY"
+                  },
+                  "parameters": [
+                    "NewSprite",
+                    "+",
+                    "10"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Object_01",
+                        "On_Pick",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MettreY"
+                      },
+                      "parameters": [
+                        "Object_01",
+                        "+",
+                        "10"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Object_02",
+                        "On_Pick",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MettreY"
+                      },
+                      "parameters": [
+                        "Object_02",
+                        "+",
+                        "10"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Object_03",
+                        "On_Pick",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MettreY"
+                      },
+                      "parameters": [
+                        "Object_03",
+                        "+",
+                        "10"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Spring",
+                        "On_Pick",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MettreY"
+                      },
+                      "parameters": [
+                        "Spring",
+                        "+",
+                        "10"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Gamepads::C_Axis_pushed"
+                  },
+                  "parameters": [
+                    "",
+                    "1",
+                    "\"Left\"",
+                    "\"Left\"",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PosX"
+                  },
+                  "parameters": [
+                    "NewSprite",
+                    ">=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "MettreX"
+                  },
+                  "parameters": [
+                    "NewSprite",
+                    "-",
+                    "10"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Object_01",
+                        "On_Pick",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MettreX"
+                      },
+                      "parameters": [
+                        "Object_01",
+                        "-",
+                        "10"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Object_02",
+                        "On_Pick",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MettreX"
+                      },
+                      "parameters": [
+                        "Object_02",
+                        "-",
+                        "10"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Object_03",
+                        "On_Pick",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MettreX"
+                      },
+                      "parameters": [
+                        "Object_03",
+                        "+",
+                        "10"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Spring",
+                        "On_Pick",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MettreX"
+                      },
+                      "parameters": [
+                        "Spring",
+                        "-",
+                        "10"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Gamepads::C_Axis_pushed"
+                  },
+                  "parameters": [
+                    "",
+                    "1",
+                    "\"Left\"",
+                    "\"Right\"",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PosX"
+                  },
+                  "parameters": [
+                    "NewSprite",
+                    "<=",
+                    "1920"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "MettreX"
+                  },
+                  "parameters": [
+                    "NewSprite",
+                    "+",
+                    "10"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Object_01",
+                        "On_Pick",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MettreX"
+                      },
+                      "parameters": [
+                        "Object_01",
+                        "+",
+                        "10"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Object_02",
+                        "On_Pick",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MettreX"
+                      },
+                      "parameters": [
+                        "Object_02",
+                        "+",
+                        "10"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Object_03",
+                        "On_Pick",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MettreX"
+                      },
+                      "parameters": [
+                        "Object_03",
+                        "+",
+                        "10"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Spring",
+                        "On_Pick",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MettreX"
+                      },
+                      "parameters": [
+                        "Spring",
+                        "+",
+                        "10"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Gamepads::C_Button_pressed"
+                  },
+                  "parameters": [
+                    "",
+                    "1",
+                    "\"A\"",
+                    "\"Up\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "NewSprite",
+                        "Object_01",
+                        "",
+                        "",
+                        "no"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AjoutHasard"
+                      },
+                      "parameters": [
+                        "",
+                        "Object_01"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Object_01",
+                        "On_Pick",
+                        "Toggle",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PosX"
+                          },
+                          "parameters": [
+                            "Object_01",
+                            "=",
+                            "1728"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PosY"
+                          },
+                          "parameters": [
+                            "Object_01",
+                            "=",
+                            "640"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "folded": true,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "Score",
+                                ">=",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "Object_01",
+                                "1728",
+                                "640",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "Score",
+                                "-",
+                                "100"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanVariable"
+                              },
+                              "parameters": [
+                                "Last_Block",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberVariable"
+                                  },
+                                  "parameters": [
+                                    "Score",
+                                    "<",
+                                    "0"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetBooleanVariable"
+                                  },
+                                  "parameters": [
+                                    "Last_Block",
+                                    "False",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberVariable"
+                                  },
+                                  "parameters": [
+                                    "Score",
+                                    "+",
+                                    "100"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanVariable"
+                              },
+                              "parameters": [
+                                "Last_Block",
+                                "False",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Object_01",
+                                "On_Pick",
+                                "Toggle",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "NewSprite",
+                        "Object_02",
+                        "",
+                        "",
+                        "no"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AjoutHasard"
+                      },
+                      "parameters": [
+                        "",
+                        "Object_02"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Object_02",
+                        "On_Pick",
+                        "Toggle",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PosX"
+                          },
+                          "parameters": [
+                            "Object_02",
+                            "=",
+                            "1760"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PosY"
+                          },
+                          "parameters": [
+                            "Object_02",
+                            "=",
+                            "288"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "folded": true,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "Score",
+                                ">=",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "Object_02",
+                                "1760",
+                                "288",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "Score",
+                                "-",
+                                "100"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanVariable"
+                              },
+                              "parameters": [
+                                "Last_Block",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberVariable"
+                                  },
+                                  "parameters": [
+                                    "Score",
+                                    "<",
+                                    "0"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetBooleanVariable"
+                                  },
+                                  "parameters": [
+                                    "Last_Block",
+                                    "False",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberVariable"
+                                  },
+                                  "parameters": [
+                                    "Score",
+                                    "+",
+                                    "100"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanVariable"
+                              },
+                              "parameters": [
+                                "Last_Block",
+                                "False",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Object_02",
+                                "On_Pick",
+                                "Toggle",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "NewSprite",
+                        "Object_03",
+                        "",
+                        "",
+                        "no"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AjoutHasard"
+                      },
+                      "parameters": [
+                        "",
+                        "Object_03"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Object_03",
+                        "On_Pick",
+                        "Toggle",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PosX"
+                          },
+                          "parameters": [
+                            "Object_03",
+                            "=",
+                            "1792"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PosY"
+                          },
+                          "parameters": [
+                            "Object_03",
+                            "=",
+                            "64"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "Score",
+                                ">=",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "Object_03",
+                                "1792",
+                                "64",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "Score",
+                                "-",
+                                "100"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanVariable"
+                              },
+                              "parameters": [
+                                "Last_Block",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberVariable"
+                                  },
+                                  "parameters": [
+                                    "Score",
+                                    "<",
+                                    "0"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetBooleanVariable"
+                                  },
+                                  "parameters": [
+                                    "Last_Block",
+                                    "False",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberVariable"
+                                  },
+                                  "parameters": [
+                                    "Score",
+                                    "+",
+                                    "100"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanVariable"
+                              },
+                              "parameters": [
+                                "Last_Block",
+                                "False",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Object_03",
+                                "On_Pick",
+                                "Toggle",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "NewSprite",
+                        "Spring",
+                        "",
+                        "",
+                        "no"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AjoutHasard"
+                      },
+                      "parameters": [
+                        "",
+                        "Spring"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Spring",
+                        "On_Pick",
+                        "Toggle",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PosX"
+                          },
+                          "parameters": [
+                            "Spring",
+                            "=",
+                            "1824"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PosY"
+                          },
+                          "parameters": [
+                            "Spring",
+                            "=",
+                            "832"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "Score",
+                                ">=",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "Spring",
+                                "1824",
+                                "832",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "Score",
+                                "-",
+                                "300"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanVariable"
+                              },
+                              "parameters": [
+                                "Last_Block",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberVariable"
+                                  },
+                                  "parameters": [
+                                    "Score",
+                                    "<",
+                                    "0"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetBooleanVariable"
+                                  },
+                                  "parameters": [
+                                    "Last_Block",
+                                    "False",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberVariable"
+                                  },
+                                  "parameters": [
+                                    "Score",
+                                    "+",
+                                    "300"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanVariable"
+                              },
+                              "parameters": [
+                                "Last_Block",
+                                "False",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Spring",
+                                "On_Pick",
+                                "Toggle",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
                   ]
                 }
               ]
@@ -21678,7 +24010,40 @@
           "isLocked": false,
           "name": "Panel",
           "renderingType": "",
-          "visibility": false,
+          "visibility": true,
+          "cameras": [],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Light",
+              "doubleParameters": {
+                "elevation": 45,
+                "intensity": 1,
+                "rotation": 0
+              },
+              "stringParameters": {
+                "groundColor": "64;64;64",
+                "skyColor": "255;255;255",
+                "top": "Y-"
+              },
+              "booleanParameters": {}
+            }
+          ]
+        },
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "Mouse",
+          "renderingType": "",
+          "visibility": true,
           "cameras": [],
           "effects": [
             {
@@ -21719,6 +24084,10 @@
         {
           "name": "Platform",
           "type": "PlatformBehavior::PlatformBehavior"
+        },
+        {
+          "name": "PlatformerGamepadMapper",
+          "type": "Gamepads::PlatformerGamepadMapper"
         },
         {
           "name": "PlatformerObject",
@@ -22939,6 +25308,165 @@
           "fullName": "Button (panel sprite)",
           "isUsingLegacyInstancesRenderer": true,
           "name": "PanelSpriteButton",
+          "objects": [
+            {
+              "assetStoreId": "",
+              "bold": false,
+              "italic": false,
+              "name": "Label",
+              "smoothed": true,
+              "type": "TextObject::Text",
+              "underlined": false,
+              "variables": [],
+              "effects": [],
+              "behaviors": [],
+              "string": "Text",
+              "font": "",
+              "textAlignment": "",
+              "characterSize": 20,
+              "color": {
+                "b": 0,
+                "g": 0,
+                "r": 0
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "Text",
+                "font": "",
+                "textAlignment": "",
+                "verticalTextAlignment": "top",
+                "characterSize": 20,
+                "color": "0;0;0"
+              }
+            },
+            {
+              "assetStoreId": "",
+              "bottomMargin": 0,
+              "height": 32,
+              "leftMargin": 0,
+              "name": "Idle",
+              "rightMargin": 0,
+              "texture": "",
+              "tiled": false,
+              "topMargin": 0,
+              "type": "PanelSpriteObject::PanelSprite",
+              "width": 32,
+              "variables": [
+                {
+                  "folded": true,
+                  "name": "State",
+                  "type": "string",
+                  "value": "Idle"
+                }
+              ],
+              "effects": [],
+              "behaviors": [
+                {
+                  "name": "ButtonFSM",
+                  "type": "PanelSpriteButton::ButtonFSM",
+                  "ShouldCheckHovering": true
+                }
+              ]
+            },
+            {
+              "assetStoreId": "",
+              "bottomMargin": 0,
+              "height": 32,
+              "leftMargin": 0,
+              "name": "Hovered",
+              "rightMargin": 0,
+              "texture": "",
+              "tiled": false,
+              "topMargin": 0,
+              "type": "PanelSpriteObject::PanelSprite",
+              "width": 32,
+              "variables": [],
+              "effects": [],
+              "behaviors": [
+                {
+                  "name": "Tween",
+                  "type": "Tween::TweenBehavior"
+                }
+              ]
+            },
+            {
+              "assetStoreId": "",
+              "bottomMargin": 0,
+              "height": 32,
+              "leftMargin": 0,
+              "name": "Pressed",
+              "rightMargin": 0,
+              "texture": "",
+              "tiled": false,
+              "topMargin": 0,
+              "type": "PanelSpriteObject::PanelSprite",
+              "width": 32,
+              "variables": [],
+              "effects": [],
+              "behaviors": []
+            }
+          ],
+          "objectsFolderStructure": {
+            "folderName": "__ROOT",
+            "children": [
+              {
+                "objectName": "Label"
+              },
+              {
+                "objectName": "Idle"
+              },
+              {
+                "objectName": "Hovered"
+              },
+              {
+                "objectName": "Pressed"
+              }
+            ]
+          },
+          "objectsGroups": [],
+          "layers": [
+            {
+              "ambientLightColorB": 200,
+              "ambientLightColorG": 200,
+              "ambientLightColorR": 200,
+              "camera3DFarPlaneDistance": 10000,
+              "camera3DFieldOfView": 45,
+              "camera3DNearPlaneDistance": 3,
+              "cameraType": "",
+              "followBaseLayerCamera": false,
+              "isLightingLayer": false,
+              "isLocked": false,
+              "name": "",
+              "renderingType": "",
+              "visibility": true,
+              "cameras": [
+                {
+                  "defaultSize": true,
+                  "defaultViewport": true,
+                  "height": 0,
+                  "viewportBottom": 1,
+                  "viewportLeft": 0,
+                  "viewportRight": 1,
+                  "viewportTop": 0,
+                  "width": 0
+                }
+              ],
+              "effects": []
+            }
+          ],
+          "instances": [],
           "eventsFunctions": [
             {
               "fullName": "",
@@ -24311,165 +26839,7 @@
               "name": "HoveredFadeOutDuration"
             }
           ],
-          "objects": [
-            {
-              "assetStoreId": "",
-              "bold": false,
-              "italic": false,
-              "name": "Label",
-              "smoothed": true,
-              "type": "TextObject::Text",
-              "underlined": false,
-              "variables": [],
-              "effects": [],
-              "behaviors": [],
-              "string": "Text",
-              "font": "",
-              "textAlignment": "",
-              "characterSize": 20,
-              "color": {
-                "b": 0,
-                "g": 0,
-                "r": 0
-              },
-              "content": {
-                "bold": false,
-                "isOutlineEnabled": false,
-                "isShadowEnabled": false,
-                "italic": false,
-                "outlineColor": "255;255;255",
-                "outlineThickness": 2,
-                "shadowAngle": 90,
-                "shadowBlurRadius": 2,
-                "shadowColor": "0;0;0",
-                "shadowDistance": 4,
-                "shadowOpacity": 127,
-                "smoothed": true,
-                "underlined": false,
-                "text": "Text",
-                "font": "",
-                "textAlignment": "",
-                "verticalTextAlignment": "top",
-                "characterSize": 20,
-                "color": "0;0;0"
-              }
-            },
-            {
-              "assetStoreId": "",
-              "bottomMargin": 0,
-              "height": 32,
-              "leftMargin": 0,
-              "name": "Idle",
-              "rightMargin": 0,
-              "texture": "",
-              "tiled": false,
-              "topMargin": 0,
-              "type": "PanelSpriteObject::PanelSprite",
-              "width": 32,
-              "variables": [
-                {
-                  "folded": true,
-                  "name": "State",
-                  "type": "string",
-                  "value": "Idle"
-                }
-              ],
-              "effects": [],
-              "behaviors": [
-                {
-                  "name": "ButtonFSM",
-                  "type": "PanelSpriteButton::ButtonFSM",
-                  "ShouldCheckHovering": true
-                }
-              ]
-            },
-            {
-              "assetStoreId": "",
-              "bottomMargin": 0,
-              "height": 32,
-              "leftMargin": 0,
-              "name": "Hovered",
-              "rightMargin": 0,
-              "texture": "",
-              "tiled": false,
-              "topMargin": 0,
-              "type": "PanelSpriteObject::PanelSprite",
-              "width": 32,
-              "variables": [],
-              "effects": [],
-              "behaviors": [
-                {
-                  "name": "Tween",
-                  "type": "Tween::TweenBehavior"
-                }
-              ]
-            },
-            {
-              "assetStoreId": "",
-              "bottomMargin": 0,
-              "height": 32,
-              "leftMargin": 0,
-              "name": "Pressed",
-              "rightMargin": 0,
-              "texture": "",
-              "tiled": false,
-              "topMargin": 0,
-              "type": "PanelSpriteObject::PanelSprite",
-              "width": 32,
-              "variables": [],
-              "effects": [],
-              "behaviors": []
-            }
-          ],
-          "objectsFolderStructure": {
-            "folderName": "__ROOT",
-            "children": [
-              {
-                "objectName": "Label"
-              },
-              {
-                "objectName": "Idle"
-              },
-              {
-                "objectName": "Hovered"
-              },
-              {
-                "objectName": "Pressed"
-              }
-            ]
-          },
-          "objectsGroups": [],
-          "layers": [
-            {
-              "ambientLightColorB": 200,
-              "ambientLightColorG": 200,
-              "ambientLightColorR": 200,
-              "camera3DFarPlaneDistance": 10000,
-              "camera3DFieldOfView": 45,
-              "camera3DNearPlaneDistance": 3,
-              "cameraType": "",
-              "followBaseLayerCamera": false,
-              "isLightingLayer": false,
-              "isLocked": false,
-              "name": "",
-              "renderingType": "",
-              "visibility": true,
-              "cameras": [
-                {
-                  "defaultSize": true,
-                  "defaultViewport": true,
-                  "height": 0,
-                  "viewportBottom": 1,
-                  "viewportLeft": 0,
-                  "viewportRight": 1,
-                  "viewportTop": 0,
-                  "width": 0
-                }
-              ],
-              "effects": []
-            }
-          ],
-          "instances": []
+          "variants": []
         }
       ]
     },
