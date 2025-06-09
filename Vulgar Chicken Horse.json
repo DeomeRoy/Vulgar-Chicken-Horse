@@ -1,7 +1,7 @@
 {
   "firstLayout": "Title",
   "gdVersion": {
-    "build": 230,
+    "build": 231,
     "major": 5,
     "minor": 5,
     "revision": 0
@@ -712,6 +712,27 @@
       "name": "Last_Spring",
       "type": "boolean",
       "value": true
+    },
+    {
+      "name": "GameData",
+      "type": "structure",
+      "children": [
+        {
+          "name": "Level",
+          "type": "string",
+          "value": "0"
+        },
+        {
+          "name": "Score",
+          "type": "number",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "name": "GameRank",
+      "type": "structure",
+      "children": []
     }
   ],
   "layouts": [
@@ -5188,6 +5209,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -5551,6 +5573,7 @@
           "comment": "SET"
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [],
@@ -5871,6 +5894,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [],
@@ -7593,17 +7617,53 @@
                           ]
                         }
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "value": "Scene"
+                        "value": "SendAsyncRequest"
+                      },
+                      "parameters": [
+                        "\"http://127.0.0.1/postscore\"",
+                        "ToJSON(GameData)",
+                        "\"POST\"",
+                        "\"application/json\"",
+                        "score",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "JSONToVariableStructure2"
                       },
                       "parameters": [
                         "",
-                        "\"Level_01\"",
                         ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Scene"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Level_01\"",
+                            ""
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -7700,6 +7760,7 @@
           "comment": "Controller"
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
