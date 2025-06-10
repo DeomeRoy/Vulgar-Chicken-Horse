@@ -1,7 +1,7 @@
 {
   "firstLayout": "Title",
   "gdVersion": {
-    "build": 230,
+    "build": 228,
     "major": 5,
     "minor": 5,
     "revision": 0
@@ -24,7 +24,7 @@
     "author": "",
     "windowWidth": 1920,
     "windowHeight": 1080,
-    "latestCompilationDirectory": "C:\\Users\\user\\Downloads\\game",
+    "latestCompilationDirectory": "C:\\Users\\user\\Desktop\\gameserver-main\\public",
     "maxFPS": 60,
     "minFPS": 20,
     "verticalSync": false,
@@ -712,6 +712,22 @@
       "name": "Last_Spring",
       "type": "boolean",
       "value": true
+    },
+    {
+      "name": "Rank",
+      "type": "structure",
+      "children": [
+        {
+          "name": "RankScore",
+          "type": "number",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "name": "HighestRank",
+      "type": "array",
+      "children": []
     }
   ],
   "layouts": [
@@ -1551,7 +1567,6 @@
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "Back",
           "type": "PanelSpriteButton::PanelSpriteButton",
-          "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [],
@@ -1636,7 +1651,6 @@
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "Level_1",
           "type": "PanelSpriteButton::PanelSpriteButton",
-          "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [],
@@ -1721,7 +1735,6 @@
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "Level_2",
           "type": "PanelSpriteButton::PanelSpriteButton",
-          "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [],
@@ -1806,7 +1819,6 @@
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "Level_3",
           "type": "PanelSpriteButton::PanelSpriteButton",
-          "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [],
@@ -2409,7 +2421,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.4913877545329511,
+        "zoomFactor": 0.5250860067782674,
         "windowMask": false
       },
       "objectsGroups": [
@@ -2451,6 +2463,9 @@
             },
             {
               "name": "ScoreBoard2"
+            },
+            {
+              "name": "ScoreBoard3"
             }
           ]
         },
@@ -2488,6 +2503,11 @@
           "name": "Level_Done",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "rank1",
+          "type": "string",
+          "value": "0"
         }
       ],
       "instances": [
@@ -2988,7 +3008,7 @@
           "layer": "Panel",
           "name": "ScoreBoard2",
           "persistentUuid": "af861757-9d4d-4139-afa6-d73d633655bb",
-          "width": 512,
+          "width": 608,
           "x": 768,
           "y": 512,
           "zOrder": 33,
@@ -3008,6 +3028,23 @@
           "x": 1448,
           "y": 502,
           "zOrder": 34,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 92,
+          "keepRatio": true,
+          "layer": "Panel",
+          "name": "ScoreBoard3",
+          "persistentUuid": "857d4ec5-1498-448e-9a74-f79827fd22ed",
+          "width": 864,
+          "x": 576,
+          "y": 612,
+          "zOrder": 35,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3526,7 +3563,6 @@
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "SwitchButton",
           "type": "PanelSpriteButton::PanelSpriteButton",
-          "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [],
@@ -3930,7 +3966,6 @@
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "Clear_Button",
           "type": "PanelSpriteButton::PanelSpriteButton",
-          "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [],
@@ -4518,7 +4553,6 @@
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "BackToTitle",
           "type": "PanelSpriteButton::PanelSpriteButton",
-          "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [],
@@ -4603,7 +4637,6 @@
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "ReStart",
           "type": "PanelSpriteButton::PanelSpriteButton",
-          "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [],
@@ -4688,7 +4721,6 @@
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "NextLevel",
           "type": "PanelSpriteButton::PanelSpriteButton",
-          "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [],
@@ -4810,6 +4842,48 @@
             "characterSize": 80,
             "color": "0;0;0"
           }
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "ScoreBoard3",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Highest Score：",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 80,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Highest Score：",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 80,
+            "color": "0;0;0"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -4853,6 +4927,9 @@
               },
               {
                 "objectName": "ScoreBoard2"
+              },
+              {
+                "objectName": "ScoreBoard3"
               }
             ]
           },
@@ -7089,7 +7166,6 @@
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -7220,6 +7296,16 @@
                     "yes",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Rank.RankScore",
+                    "=",
+                    "Score"
+                  ]
                 }
               ],
               "events": [
@@ -7303,6 +7389,67 @@
                         "Animation",
                         "=",
                         "\"Star\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "await": true,
+                        "value": "SendAsyncRequest"
+                      },
+                      "parameters": [
+                        "\"/postscore\"",
+                        "ToJSON(Rank)",
+                        "\"POST\"",
+                        "\"application/json\"",
+                        "rank1",
+                        "log"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "JSONToVariableStructure2"
+                          },
+                          "parameters": [
+                            "rank1",
+                            "HighestRank"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "ScoreBoard3",
+                            "Text",
+                            "=",
+                            "\"Highest Score：\" + ToString(HighestRank[0].RankScore)"
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -9940,7 +10087,6 @@
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "SwitchButton",
           "type": "PanelSpriteButton::PanelSpriteButton",
-          "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [],
@@ -10344,7 +10490,6 @@
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "Clear_Button",
           "type": "PanelSpriteButton::PanelSpriteButton",
-          "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [],
@@ -10932,7 +11077,6 @@
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "BackToTitle",
           "type": "PanelSpriteButton::PanelSpriteButton",
-          "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [],
@@ -11017,7 +11161,6 @@
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "ReStart",
           "type": "PanelSpriteButton::PanelSpriteButton",
-          "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [],
@@ -11102,7 +11245,6 @@
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "NextLevel",
           "type": "PanelSpriteButton::PanelSpriteButton",
-          "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [],
@@ -17715,7 +17857,6 @@
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "SwitchButton",
           "type": "PanelSpriteButton::PanelSpriteButton",
-          "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [],
@@ -18119,7 +18260,6 @@
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "Clear_Button",
           "type": "PanelSpriteButton::PanelSpriteButton",
-          "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [],
@@ -18707,7 +18847,6 @@
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "BackToTitle",
           "type": "PanelSpriteButton::PanelSpriteButton",
-          "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [],
@@ -18792,7 +18931,6 @@
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "ReStart",
           "type": "PanelSpriteButton::PanelSpriteButton",
-          "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [],
@@ -18877,7 +19015,6 @@
           "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
           "name": "NextLevel",
           "type": "PanelSpriteButton::PanelSpriteButton",
-          "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [],
@@ -25308,165 +25445,6 @@
           "fullName": "Button (panel sprite)",
           "isUsingLegacyInstancesRenderer": true,
           "name": "PanelSpriteButton",
-          "objects": [
-            {
-              "assetStoreId": "",
-              "bold": false,
-              "italic": false,
-              "name": "Label",
-              "smoothed": true,
-              "type": "TextObject::Text",
-              "underlined": false,
-              "variables": [],
-              "effects": [],
-              "behaviors": [],
-              "string": "Text",
-              "font": "",
-              "textAlignment": "",
-              "characterSize": 20,
-              "color": {
-                "b": 0,
-                "g": 0,
-                "r": 0
-              },
-              "content": {
-                "bold": false,
-                "isOutlineEnabled": false,
-                "isShadowEnabled": false,
-                "italic": false,
-                "outlineColor": "255;255;255",
-                "outlineThickness": 2,
-                "shadowAngle": 90,
-                "shadowBlurRadius": 2,
-                "shadowColor": "0;0;0",
-                "shadowDistance": 4,
-                "shadowOpacity": 127,
-                "smoothed": true,
-                "underlined": false,
-                "text": "Text",
-                "font": "",
-                "textAlignment": "",
-                "verticalTextAlignment": "top",
-                "characterSize": 20,
-                "color": "0;0;0"
-              }
-            },
-            {
-              "assetStoreId": "",
-              "bottomMargin": 0,
-              "height": 32,
-              "leftMargin": 0,
-              "name": "Idle",
-              "rightMargin": 0,
-              "texture": "",
-              "tiled": false,
-              "topMargin": 0,
-              "type": "PanelSpriteObject::PanelSprite",
-              "width": 32,
-              "variables": [
-                {
-                  "folded": true,
-                  "name": "State",
-                  "type": "string",
-                  "value": "Idle"
-                }
-              ],
-              "effects": [],
-              "behaviors": [
-                {
-                  "name": "ButtonFSM",
-                  "type": "PanelSpriteButton::ButtonFSM",
-                  "ShouldCheckHovering": true
-                }
-              ]
-            },
-            {
-              "assetStoreId": "",
-              "bottomMargin": 0,
-              "height": 32,
-              "leftMargin": 0,
-              "name": "Hovered",
-              "rightMargin": 0,
-              "texture": "",
-              "tiled": false,
-              "topMargin": 0,
-              "type": "PanelSpriteObject::PanelSprite",
-              "width": 32,
-              "variables": [],
-              "effects": [],
-              "behaviors": [
-                {
-                  "name": "Tween",
-                  "type": "Tween::TweenBehavior"
-                }
-              ]
-            },
-            {
-              "assetStoreId": "",
-              "bottomMargin": 0,
-              "height": 32,
-              "leftMargin": 0,
-              "name": "Pressed",
-              "rightMargin": 0,
-              "texture": "",
-              "tiled": false,
-              "topMargin": 0,
-              "type": "PanelSpriteObject::PanelSprite",
-              "width": 32,
-              "variables": [],
-              "effects": [],
-              "behaviors": []
-            }
-          ],
-          "objectsFolderStructure": {
-            "folderName": "__ROOT",
-            "children": [
-              {
-                "objectName": "Label"
-              },
-              {
-                "objectName": "Idle"
-              },
-              {
-                "objectName": "Hovered"
-              },
-              {
-                "objectName": "Pressed"
-              }
-            ]
-          },
-          "objectsGroups": [],
-          "layers": [
-            {
-              "ambientLightColorB": 200,
-              "ambientLightColorG": 200,
-              "ambientLightColorR": 200,
-              "camera3DFarPlaneDistance": 10000,
-              "camera3DFieldOfView": 45,
-              "camera3DNearPlaneDistance": 3,
-              "cameraType": "",
-              "followBaseLayerCamera": false,
-              "isLightingLayer": false,
-              "isLocked": false,
-              "name": "",
-              "renderingType": "",
-              "visibility": true,
-              "cameras": [
-                {
-                  "defaultSize": true,
-                  "defaultViewport": true,
-                  "height": 0,
-                  "viewportBottom": 1,
-                  "viewportLeft": 0,
-                  "viewportRight": 1,
-                  "viewportTop": 0,
-                  "width": 0
-                }
-              ],
-              "effects": []
-            }
-          ],
-          "instances": [],
           "eventsFunctions": [
             {
               "fullName": "",
@@ -26839,7 +26817,165 @@
               "name": "HoveredFadeOutDuration"
             }
           ],
-          "variants": []
+          "objects": [
+            {
+              "assetStoreId": "",
+              "bold": false,
+              "italic": false,
+              "name": "Label",
+              "smoothed": true,
+              "type": "TextObject::Text",
+              "underlined": false,
+              "variables": [],
+              "effects": [],
+              "behaviors": [],
+              "string": "Text",
+              "font": "",
+              "textAlignment": "",
+              "characterSize": 20,
+              "color": {
+                "b": 0,
+                "g": 0,
+                "r": 0
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "Text",
+                "font": "",
+                "textAlignment": "",
+                "verticalTextAlignment": "top",
+                "characterSize": 20,
+                "color": "0;0;0"
+              }
+            },
+            {
+              "assetStoreId": "",
+              "bottomMargin": 0,
+              "height": 32,
+              "leftMargin": 0,
+              "name": "Idle",
+              "rightMargin": 0,
+              "texture": "",
+              "tiled": false,
+              "topMargin": 0,
+              "type": "PanelSpriteObject::PanelSprite",
+              "width": 32,
+              "variables": [
+                {
+                  "folded": true,
+                  "name": "State",
+                  "type": "string",
+                  "value": "Idle"
+                }
+              ],
+              "effects": [],
+              "behaviors": [
+                {
+                  "name": "ButtonFSM",
+                  "type": "PanelSpriteButton::ButtonFSM",
+                  "ShouldCheckHovering": true
+                }
+              ]
+            },
+            {
+              "assetStoreId": "",
+              "bottomMargin": 0,
+              "height": 32,
+              "leftMargin": 0,
+              "name": "Hovered",
+              "rightMargin": 0,
+              "texture": "",
+              "tiled": false,
+              "topMargin": 0,
+              "type": "PanelSpriteObject::PanelSprite",
+              "width": 32,
+              "variables": [],
+              "effects": [],
+              "behaviors": [
+                {
+                  "name": "Tween",
+                  "type": "Tween::TweenBehavior"
+                }
+              ]
+            },
+            {
+              "assetStoreId": "",
+              "bottomMargin": 0,
+              "height": 32,
+              "leftMargin": 0,
+              "name": "Pressed",
+              "rightMargin": 0,
+              "texture": "",
+              "tiled": false,
+              "topMargin": 0,
+              "type": "PanelSpriteObject::PanelSprite",
+              "width": 32,
+              "variables": [],
+              "effects": [],
+              "behaviors": []
+            }
+          ],
+          "objectsFolderStructure": {
+            "folderName": "__ROOT",
+            "children": [
+              {
+                "objectName": "Label"
+              },
+              {
+                "objectName": "Idle"
+              },
+              {
+                "objectName": "Hovered"
+              },
+              {
+                "objectName": "Pressed"
+              }
+            ]
+          },
+          "objectsGroups": [],
+          "layers": [
+            {
+              "ambientLightColorB": 200,
+              "ambientLightColorG": 200,
+              "ambientLightColorR": 200,
+              "camera3DFarPlaneDistance": 10000,
+              "camera3DFieldOfView": 45,
+              "camera3DNearPlaneDistance": 3,
+              "cameraType": "",
+              "followBaseLayerCamera": false,
+              "isLightingLayer": false,
+              "isLocked": false,
+              "name": "",
+              "renderingType": "",
+              "visibility": true,
+              "cameras": [
+                {
+                  "defaultSize": true,
+                  "defaultViewport": true,
+                  "height": 0,
+                  "viewportBottom": 1,
+                  "viewportLeft": 0,
+                  "viewportRight": 1,
+                  "viewportTop": 0,
+                  "width": 0
+                }
+              ],
+              "effects": []
+            }
+          ],
+          "instances": []
         }
       ]
     },
