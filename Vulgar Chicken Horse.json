@@ -24,7 +24,7 @@
     "author": "",
     "windowWidth": 1920,
     "windowHeight": 1080,
-    "latestCompilationDirectory": "C:\\Users\\user\\Desktop\\gameserver-main\\public",
+    "latestCompilationDirectory": "C:\\Users\\user\\Desktop\\EasyGameServer\\public",
     "maxFPS": 60,
     "minFPS": 20,
     "verticalSync": false,
@@ -714,7 +714,7 @@
       "value": true
     },
     {
-      "name": "Rank",
+      "name": "RankLevel_1",
       "type": "structure",
       "children": [
         {
@@ -725,7 +725,39 @@
       ]
     },
     {
-      "name": "HighestRank",
+      "name": "RankLevel_2",
+      "type": "structure",
+      "children": [
+        {
+          "name": "RankScore",
+          "type": "number",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "name": "RankLevel_3",
+      "type": "structure",
+      "children": [
+        {
+          "name": "RankScore",
+          "type": "number",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "name": "HighestRankLevel_1",
+      "type": "array",
+      "children": []
+    },
+    {
+      "name": "HighestRankLevel_2",
+      "type": "array",
+      "children": []
+    },
+    {
+      "name": "HighestRankLevel_3",
       "type": "array",
       "children": []
     }
@@ -1438,11 +1470,27 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.49138775453293704,
+        "zoomFactor": 0.5079575118131751,
         "windowMask": false
       },
       "objectsGroups": [],
-      "variables": [],
+      "variables": [
+        {
+          "name": "Rank",
+          "type": "string",
+          "value": "0"
+        },
+        {
+          "name": "Rank2",
+          "type": "string",
+          "value": "0"
+        },
+        {
+          "name": "Rank3",
+          "type": "string",
+          "value": "0"
+        }
+      ],
       "instances": [
         {
           "angle": 0,
@@ -1505,7 +1553,7 @@
           "name": "Level_2",
           "persistentUuid": "f6d62aff-9827-4adf-83f3-a5c9defe9c24",
           "width": 224,
-          "x": 672,
+          "x": 960,
           "y": 352,
           "zOrder": 4,
           "numberProperties": [],
@@ -1522,7 +1570,7 @@
           "name": "Level_3",
           "persistentUuid": "9c1c48d1-73e5-49a1-b6f7-b36f9c953f18",
           "width": 224,
-          "x": 992,
+          "x": 1568,
           "y": 352,
           "zOrder": 5,
           "numberProperties": [],
@@ -1538,9 +1586,179 @@
           "name": "NewSprite",
           "persistentUuid": "9fbc5de6-44c4-46eb-b21c-05688a58d0c0",
           "width": 0,
-          "x": 864,
-          "y": 640,
+          "x": 640,
+          "y": 182,
           "zOrder": 6,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 48,
+          "height": 224,
+          "keepRatio": true,
+          "layer": "",
+          "name": "reset_score",
+          "persistentUuid": "c3ce5954-05a9-43ad-9d17-06c89500bd0c",
+          "width": 224,
+          "x": 64,
+          "y": 352,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 96,
+          "keepRatio": true,
+          "layer": "",
+          "name": "LevelScore_1",
+          "persistentUuid": "a8a5c8dd-9f2c-42a4-9962-4c21fe8c43d1",
+          "width": 607,
+          "x": 353,
+          "y": 608,
+          "zOrder": 8,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 96,
+          "keepRatio": true,
+          "layer": "",
+          "name": "LevelScore_2",
+          "persistentUuid": "08f434e7-7f1b-49e1-b90c-7462605e1dda",
+          "width": 608,
+          "x": 960,
+          "y": 608,
+          "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 96,
+          "keepRatio": true,
+          "layer": "",
+          "name": "LevelScore_3",
+          "persistentUuid": "9fe5bbda-3a6d-45bc-bf0a-df0466ced01f",
+          "width": 608,
+          "x": 1568,
+          "y": 608,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 92,
+          "keepRatio": true,
+          "layer": "",
+          "name": "LevelScore_1_2",
+          "persistentUuid": "35012591-4b20-45be-90fd-58e3c85e3b7f",
+          "width": 608,
+          "x": 352,
+          "y": 704,
+          "zOrder": 11,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 92,
+          "keepRatio": true,
+          "layer": "",
+          "name": "LevelScore_1_3",
+          "persistentUuid": "f8e0ac67-0094-4512-bed5-48761a53a385",
+          "width": 608,
+          "x": 352,
+          "y": 800,
+          "zOrder": 12,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 92,
+          "keepRatio": true,
+          "layer": "",
+          "name": "LevelScore_2_2",
+          "persistentUuid": "66da7554-2b7e-4292-a28a-bf9f9b5e57ba",
+          "width": 608,
+          "x": 960,
+          "y": 704,
+          "zOrder": 13,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 92,
+          "keepRatio": true,
+          "layer": "",
+          "name": "LevelScore_2_3",
+          "persistentUuid": "1d6d56d9-1c13-4fd0-8e60-f16a21b16d37",
+          "width": 608,
+          "x": 960,
+          "y": 800,
+          "zOrder": 14,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 92,
+          "keepRatio": true,
+          "layer": "",
+          "name": "LevelScore_3_2",
+          "persistentUuid": "3672a1bf-b594-48c1-ba9a-2dc40fec1236",
+          "width": 608,
+          "x": 1568,
+          "y": 704,
+          "zOrder": 15,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 92,
+          "keepRatio": true,
+          "layer": "",
+          "name": "LevelScore_3_3",
+          "persistentUuid": "8712f4fa-604f-4c37-9dff-273bff2dd9ef",
+          "width": 608,
+          "x": 1568,
+          "y": 800,
+          "zOrder": 16,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1898,6 +2116,468 @@
               "width": 256
             }
           }
+        },
+        {
+          "assetStoreId": "bfab3a269992cf43081e2cb8053c28aaef11f2f9e0d0cbdc00207ea271f69c2c",
+          "name": "reset_score",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 16,
+            "RightPadding": 16,
+            "PressedLabelOffsetY": 10,
+            "BottomPadding": 32,
+            "TopPadding": 16,
+            "HoveredFadeOutDuration": 0.25
+          },
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 32,
+              "height": 106,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Grey Button_Hovered.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 256
+            },
+            "Idle": {
+              "bottomMargin": 32,
+              "height": 106,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Grey Button_Idle.png",
+              "tiled": false,
+              "topMargin": 16,
+              "width": 256
+            },
+            "Label": {
+              "bold": true,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "Reset\nScore",
+              "font": "",
+              "textAlignment": "center",
+              "characterSize": 60,
+              "color": {
+                "b": 79,
+                "g": 72,
+                "r": 72
+              },
+              "content": {
+                "bold": true,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "Reset\nScore",
+                "font": "",
+                "textAlignment": "center",
+                "verticalTextAlignment": "top",
+                "characterSize": 60,
+                "color": "72;72;79"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 16,
+              "height": 106,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Grey Button_Pressed.png",
+              "tiled": false,
+              "topMargin": 32,
+              "width": 256
+            }
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "LevelScore_1",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "No.1 :",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 80,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "No.1 :",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 80,
+            "color": "255;255;255"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "LevelScore_2",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "No.1 :",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 80,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "No.1 :",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 80,
+            "color": "255;255;255"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "LevelScore_3",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "No.1 :",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 80,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "No.1 :",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 80,
+            "color": "255;255;255"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "LevelScore_1_2",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "No.2 :",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 80,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "No.2 :",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 80,
+            "color": "255;255;255"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "LevelScore_1_3",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "No.3 :",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 80,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "No.3 :",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 80,
+            "color": "255;255;255"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "LevelScore_2_2",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "No.2 :",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 80,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "No.2 :",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 80,
+            "color": "255;255;255"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "LevelScore_3_2",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "No.2 :",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 80,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "No.2 :",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 80,
+            "color": "255;255;255"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "LevelScore_2_3",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "No.3 :",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 80,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "No.3 :",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 80,
+            "color": "255;255;255"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "LevelScore_3_3",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "No.3 :",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 80,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "No.3 :",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 80,
+            "color": "255;255;255"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -1905,6 +2585,33 @@
         "children": [
           {
             "objectName": "Title_Image"
+          },
+          {
+            "objectName": "LevelScore_1"
+          },
+          {
+            "objectName": "LevelScore_1_2"
+          },
+          {
+            "objectName": "LevelScore_1_3"
+          },
+          {
+            "objectName": "LevelScore_2"
+          },
+          {
+            "objectName": "LevelScore_2_2"
+          },
+          {
+            "objectName": "LevelScore_2_3"
+          },
+          {
+            "objectName": "LevelScore_3"
+          },
+          {
+            "objectName": "LevelScore_3_2"
+          },
+          {
+            "objectName": "LevelScore_3_3"
           },
           {
             "objectName": "Back"
@@ -1917,10 +2624,222 @@
           },
           {
             "objectName": "Level_3"
+          },
+          {
+            "objectName": "reset_score"
           }
         ]
       },
       "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "await": true,
+                "value": "SendAsyncRequest"
+              },
+              "parameters": [
+                "\"/postscore1\"",
+                "\"\"",
+                "\"POST\"",
+                "\"application/json\"",
+                "Rank",
+                "log"
+              ]
+            },
+            {
+              "type": {
+                "await": true,
+                "value": "SendAsyncRequest"
+              },
+              "parameters": [
+                "\"/postscore2\"",
+                "\"\"",
+                "\"POST\"",
+                "\"application/json\"",
+                "Rank2",
+                "log"
+              ]
+            },
+            {
+              "type": {
+                "await": true,
+                "value": "SendAsyncRequest"
+              },
+              "parameters": [
+                "\"/postscore3\"",
+                "\"\"",
+                "\"POST\"",
+                "\"application/json\"",
+                "Rank3",
+                "log"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "JSONToVariableStructure2"
+                  },
+                  "parameters": [
+                    "Rank",
+                    "HighestRankLevel_1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "JSONToVariableStructure2"
+                  },
+                  "parameters": [
+                    "Rank2",
+                    "HighestRankLevel_2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "JSONToVariableStructure2"
+                  },
+                  "parameters": [
+                    "Rank3",
+                    "HighestRankLevel_3"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "LevelScore_1",
+                    "Text",
+                    "=",
+                    "\"No.1 : \" + ToString(HighestRankLevel_1[0].RankScore)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "LevelScore_1_2",
+                    "Text",
+                    "=",
+                    "\"No.2 : \" + ToString(HighestRankLevel_1[1].RankScore)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "LevelScore_1_3",
+                    "Text",
+                    "=",
+                    "\"No.3 : \" + ToString(HighestRankLevel_1[2].RankScore)"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "LevelScore_2",
+                    "Text",
+                    "=",
+                    "\"No.1 :\" + ToString(HighestRankLevel_2[0].RankScore)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "LevelScore_2_2",
+                    "Text",
+                    "=",
+                    "\"No.2 :\" + ToString(HighestRankLevel_2[1].RankScore)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "LevelScore_2_3",
+                    "Text",
+                    "=",
+                    "\"No.3 :\" + ToString(HighestRankLevel_2[2].RankScore)"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "LevelScore_3",
+                    "Text",
+                    "=",
+                    "\"No.1 :\" + ToString(HighestRankLevel_3[0].RankScore)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "LevelScore_3_2",
+                    "Text",
+                    "=",
+                    "\"No.2 :\" + ToString(HighestRankLevel_3[1].RankScore)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "LevelScore_3_3",
+                    "Text",
+                    "=",
+                    "\"No.3 :\" + ToString(HighestRankLevel_3[2].RankScore)"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
@@ -2019,8 +2938,242 @@
               },
               "parameters": [
                 "",
-                "\"Level_01\"",
+                "\"Level_03\"",
                 ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+              },
+              "parameters": [
+                "reset_score",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "await": true,
+                "value": "SendAsyncRequest"
+              },
+              "parameters": [
+                "\"/resetscore\"",
+                "\"\"",
+                "\"POST\"",
+                "\"application/json\"",
+                "",
+                ""
+              ]
+            }
+          ],
+          "events": [
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "await": true,
+                    "value": "SendAsyncRequest"
+                  },
+                  "parameters": [
+                    "\"/postscore1\"",
+                    "\"\"",
+                    "\"POST\"",
+                    "\"application/json\"",
+                    "Rank",
+                    "log"
+                  ]
+                },
+                {
+                  "type": {
+                    "await": true,
+                    "value": "SendAsyncRequest"
+                  },
+                  "parameters": [
+                    "\"/postscore2\"",
+                    "\"\"",
+                    "\"POST\"",
+                    "\"application/json\"",
+                    "Rank2",
+                    "log"
+                  ]
+                },
+                {
+                  "type": {
+                    "await": true,
+                    "value": "SendAsyncRequest"
+                  },
+                  "parameters": [
+                    "\"/postscore3\"",
+                    "\"\"",
+                    "\"POST\"",
+                    "\"application/json\"",
+                    "Rank3",
+                    "log"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "JSONToVariableStructure2"
+                      },
+                      "parameters": [
+                        "Rank",
+                        "HighestRankLevel_1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "JSONToVariableStructure2"
+                      },
+                      "parameters": [
+                        "Rank2",
+                        "HighestRankLevel_2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "JSONToVariableStructure2"
+                      },
+                      "parameters": [
+                        "Rank3",
+                        "HighestRankLevel_3"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "LevelScore_1",
+                        "Text",
+                        "=",
+                        "\"No.1 : \" + ToString(HighestRankLevel_1[0].RankScore)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "LevelScore_1_2",
+                        "Text",
+                        "=",
+                        "\"No.2 : \" + ToString(HighestRankLevel_1[1].RankScore)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "LevelScore_1_3",
+                        "Text",
+                        "=",
+                        "\"No.3 : \" + ToString(HighestRankLevel_1[2].RankScore)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "LevelScore_2",
+                        "Text",
+                        "=",
+                        "\"No.1 :\" + ToString(HighestRankLevel_2[0].RankScore)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "LevelScore_2_2",
+                        "Text",
+                        "=",
+                        "\"No.2 :\" + ToString(HighestRankLevel_2[1].RankScore)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "LevelScore_2_3",
+                        "Text",
+                        "=",
+                        "\"No.3 :\" + ToString(HighestRankLevel_2[2].RankScore)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "LevelScore_3",
+                        "Text",
+                        "=",
+                        "\"No.1 :\" + ToString(HighestRankLevel_3[0].RankScore)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "LevelScore_3_2",
+                        "Text",
+                        "=",
+                        "\"No.2 :\" + ToString(HighestRankLevel_3[1].RankScore)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "LevelScore_3_3",
+                        "Text",
+                        "=",
+                        "\"No.3 :\" + ToString(HighestRankLevel_3[2].RankScore)"
+                      ]
+                    }
+                  ]
+                }
               ]
             }
           ]
@@ -2398,6 +3551,10 @@
         {
           "name": "Scale",
           "type": "ScalableCapability::ScalableBehavior"
+        },
+        {
+          "name": "Text",
+          "type": "TextContainerCapability::TextContainerBehavior"
         }
       ]
     },
@@ -2421,7 +3578,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.5250860067782674,
+        "zoomFactor": 0.44485159988867967,
         "windowMask": false
       },
       "objectsGroups": [
@@ -2505,7 +3662,7 @@
           "value": false
         },
         {
-          "name": "rank1",
+          "name": "rank",
           "type": "string",
           "value": "0"
         }
@@ -7302,7 +8459,7 @@
                     "value": "SetNumberVariable"
                   },
                   "parameters": [
-                    "Rank.RankScore",
+                    "RankLevel_1.RankScore",
                     "=",
                     "Score"
                   ]
@@ -7410,11 +8567,11 @@
                         "value": "SendAsyncRequest"
                       },
                       "parameters": [
-                        "\"/postscore\"",
-                        "ToJSON(Rank)",
+                        "\"/postscore1\"",
+                        "ToJSON(RankLevel_1)",
                         "\"POST\"",
                         "\"application/json\"",
-                        "rank1",
+                        "rank",
                         "log"
                       ]
                     }
@@ -7429,16 +8586,10 @@
                             "value": "JSONToVariableStructure2"
                           },
                           "parameters": [
-                            "rank1",
-                            "HighestRank"
+                            "rank",
+                            "HighestRankLevel_1"
                           ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
+                        },
                         {
                           "type": {
                             "value": "TextContainerCapability::TextContainerBehavior::SetValue"
@@ -7447,7 +8598,7 @@
                             "ScoreBoard3",
                             "Text",
                             "=",
-                            "\"Highest Score：\" + ToString(HighestRank[0].RankScore)"
+                            "\"Highest Score：\" + ToString(HighestRankLevel_1[0].RankScore)"
                           ]
                         }
                       ]
@@ -7703,6 +8854,7 @@
           "comment": "Controller"
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -8995,6 +10147,9 @@
             },
             {
               "name": "ScoreBoard2"
+            },
+            {
+              "name": "ScoreBoard3"
             }
           ]
         },
@@ -9035,6 +10190,11 @@
           "name": "Level_Done",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "rank",
+          "type": "string",
+          "value": "0"
         }
       ],
       "instances": [
@@ -9534,7 +10694,7 @@
           "layer": "Panel",
           "name": "ScoreBoard2",
           "persistentUuid": "af861757-9d4d-4139-afa6-d73d633655bb",
-          "width": 512,
+          "width": 736,
           "x": 768,
           "y": 512,
           "zOrder": 33,
@@ -9570,6 +10730,23 @@
           "x": 448,
           "y": 640,
           "zOrder": 35,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 92,
+          "keepRatio": true,
+          "layer": "Panel",
+          "name": "ScoreBoard3",
+          "persistentUuid": "d35fe037-5b03-4cbd-abf8-dc9ff32d871d",
+          "width": 928,
+          "x": 576,
+          "y": 612,
+          "zOrder": 36,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -11446,6 +12623,48 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "ScoreBoard3",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Highest Score：",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 80,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Highest Score：",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 80,
+            "color": "0;0;0"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -11489,6 +12708,9 @@
               },
               {
                 "objectName": "ScoreBoard2"
+              },
+              {
+                "objectName": "ScoreBoard3"
               }
             ]
           },
@@ -14487,6 +15709,16 @@
                     "",
                     "Level_Done_Group"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "RankLevel_2.RankScore",
+                    "=",
+                    "Score"
+                  ]
                 }
               ],
               "events": [
@@ -14570,6 +15802,61 @@
                         "Animation",
                         "=",
                         "\"Star\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "await": true,
+                        "value": "SendAsyncRequest"
+                      },
+                      "parameters": [
+                        "\"/postscore2\"",
+                        "ToJSON(RankLevel_2)",
+                        "\"POST\"",
+                        "\"application/json\"",
+                        "rank",
+                        "log"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "JSONToVariableStructure2"
+                          },
+                          "parameters": [
+                            "rank",
+                            "HighestRankLevel_2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "ScoreBoard3",
+                            "Text",
+                            "=",
+                            "\"Highest Score：\" + ToString(HighestRankLevel_2[0].RankScore)"
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -16215,6 +17502,11 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
         }
       ],
       "layers": [
@@ -16434,6 +17726,9 @@
             },
             {
               "name": "ScoreBoard2"
+            },
+            {
+              "name": "ScoreBoard3"
             }
           ]
         },
@@ -16474,6 +17769,11 @@
           "name": "Level_Done",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "rank",
+          "type": "string",
+          "value": "0"
         }
       ],
       "instances": [
@@ -16973,7 +18273,7 @@
           "layer": "Panel",
           "name": "ScoreBoard2",
           "persistentUuid": "af861757-9d4d-4139-afa6-d73d633655bb",
-          "width": 512,
+          "width": 704,
           "x": 768,
           "y": 512,
           "zOrder": 33,
@@ -17340,6 +18640,23 @@
           "x": 320,
           "y": 608,
           "zOrder": 35,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 92,
+          "keepRatio": true,
+          "layer": "Panel",
+          "name": "ScoreBoard3",
+          "persistentUuid": "6cfb39dd-0b54-4e2a-82af-ff5c293ec34c",
+          "width": 896,
+          "x": 576,
+          "y": 612,
+          "zOrder": 37,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -19277,6 +20594,48 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "ScoreBoard3",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Highest Score：",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 80,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Highest Score：",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 80,
+            "color": "0;0;0"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -19320,6 +20679,9 @@
               },
               {
                 "objectName": "ScoreBoard2"
+              },
+              {
+                "objectName": "ScoreBoard3"
               }
             ]
           },
@@ -22360,6 +23722,16 @@
                     "",
                     "Level_Done_Group"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "RankLevel_3.RankScore",
+                    "=",
+                    "Score"
+                  ]
                 }
               ],
               "events": [
@@ -22373,7 +23745,7 @@
                       "parameters": [
                         "Score",
                         ">=",
-                        "300"
+                        "500"
                       ]
                     }
                   ],
@@ -22401,7 +23773,7 @@
                       "parameters": [
                         "Score",
                         ">=",
-                        "600"
+                        "1000"
                       ]
                     }
                   ],
@@ -22429,7 +23801,7 @@
                       "parameters": [
                         "Score",
                         ">=",
-                        "800"
+                        "1300"
                       ]
                     }
                   ],
@@ -22443,6 +23815,61 @@
                         "Animation",
                         "=",
                         "\"Star\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "await": true,
+                        "value": "SendAsyncRequest"
+                      },
+                      "parameters": [
+                        "\"/postscore3\"",
+                        "ToJSON(RankLevel_3)",
+                        "\"POST\"",
+                        "\"application/json\"",
+                        "rank",
+                        "log"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "JSONToVariableStructure2"
+                          },
+                          "parameters": [
+                            "rank",
+                            "HighestRankLevel_3"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "ScoreBoard3",
+                            "Text",
+                            "=",
+                            "\"Highest Score：\" + ToString(HighestRankLevel_3[0].RankScore)"
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -22689,6 +24116,7 @@
           "comment": ""
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
