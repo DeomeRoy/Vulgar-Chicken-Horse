@@ -1,7 +1,11 @@
 {
   "firstLayout": "Title",
   "gdVersion": {
+<<<<<<< HEAD
     "build": 228,
+=======
+    "build": 231,
+>>>>>>> 2276f8ba07d762e0b4a1f5b2f010ab865ae1e748
     "major": 5,
     "minor": 5,
     "revision": 0
@@ -24,7 +28,11 @@
     "author": "",
     "windowWidth": 1920,
     "windowHeight": 1080,
+<<<<<<< HEAD
     "latestCompilationDirectory": "C:\\Users\\user\\Desktop\\EasyGameServer\\public",
+=======
+    "latestCompilationDirectory": "C:\\Users\\user\\Downloads",
+>>>>>>> 2276f8ba07d762e0b4a1f5b2f010ab865ae1e748
     "maxFPS": 60,
     "minFPS": 20,
     "verticalSync": false,
@@ -714,17 +722,31 @@
       "value": true
     },
     {
+<<<<<<< HEAD
       "name": "RankLevel_1",
       "type": "structure",
       "children": [
         {
           "name": "RankScore",
+=======
+      "name": "GameData",
+      "type": "structure",
+      "children": [
+        {
+          "name": "Level",
+          "type": "string",
+          "value": "0"
+        },
+        {
+          "name": "Score",
+>>>>>>> 2276f8ba07d762e0b4a1f5b2f010ab865ae1e748
           "type": "number",
           "value": 0
         }
       ]
     },
     {
+<<<<<<< HEAD
       "name": "RankLevel_2",
       "type": "structure",
       "children": [
@@ -759,6 +781,10 @@
     {
       "name": "HighestRankLevel_3",
       "type": "array",
+=======
+      "name": "GameRank",
+      "type": "structure",
+>>>>>>> 2276f8ba07d762e0b4a1f5b2f010ab865ae1e748
       "children": []
     }
   ],
@@ -783,7 +809,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.3895856273827287,
+        "zoomFactor": 0.4027225833325913,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -815,7 +841,7 @@
           "name": "Start",
           "persistentUuid": "97e9a87f-39c3-4bfe-8436-8248a3cdb882",
           "width": 400,
-          "x": 338,
+          "x": 50,
           "y": 736,
           "zOrder": 2,
           "numberProperties": [],
@@ -831,7 +857,7 @@
           "name": "Level",
           "persistentUuid": "d7caab19-09a9-4ffd-a8e7-fc5a17962892",
           "width": 400,
-          "x": 992,
+          "x": 500,
           "y": 736,
           "zOrder": 2,
           "numberProperties": [],
@@ -848,7 +874,7 @@
           "name": "Title_Text",
           "persistentUuid": "f0b708a8-4d7f-4088-9c60-4e5414fff313",
           "width": 1291,
-          "x": 250,
+          "x": 100,
           "y": 150,
           "zOrder": 3,
           "numberProperties": [],
@@ -864,7 +890,7 @@
           "name": "Operate",
           "persistentUuid": "306de71f-084b-4d52-98ed-c529e0c1df8f",
           "width": 0,
-          "x": 1546,
+          "x": 1450,
           "y": 67,
           "zOrder": 4,
           "numberProperties": [],
@@ -876,13 +902,29 @@
           "customSize": false,
           "height": 0,
           "keepRatio": true,
-          "layer": "",
+          "layer": "Mouse",
           "name": "NewSprite",
           "persistentUuid": "e3e33e60-afac-406e-b211-2243c0186fb0",
           "width": 0,
           "x": 1032,
           "y": 654,
           "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 200,
+          "layer": "",
+          "name": "Exit",
+          "persistentUuid": "ea77b073-c08f-4237-8c87-ecaab69d1615",
+          "width": 400,
+          "x": 950,
+          "y": 736,
+          "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -967,7 +1009,28 @@
           "width": 32,
           "variables": [],
           "effects": [],
-          "behaviors": []
+          "behaviors": [
+            {
+              "name": "PlatformerObject",
+              "type": "PlatformBehavior::PlatformerObjectBehavior",
+              "acceleration": 1500,
+              "canGoDownFromJumpthru": true,
+              "canGrabPlatforms": false,
+              "canGrabWithoutMoving": true,
+              "deceleration": 1500,
+              "gravity": 0,
+              "ignoreDefaultControls": false,
+              "jumpSpeed": 0,
+              "jumpSustainTime": 0,
+              "ladderClimbingSpeed": 0,
+              "maxFallingSpeed": 0,
+              "maxSpeed": 250,
+              "slopeMaxAngle": 60,
+              "useLegacyTrajectory": false,
+              "xGrabTolerance": 0,
+              "yGrabOffset": 0
+            }
+          ]
         },
         {
           "assetStoreId": "",
@@ -1121,6 +1184,33 @@
                   "parameters": [
                     "",
                     "\"Level_Select\"",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "Exit",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "BackButton::doDefault"
+                  },
+                  "parameters": [
+                    "",
                     ""
                   ]
                 }
@@ -1363,6 +1453,34 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "NewSprite",
+                        "Exit",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "BackButton::doDefault"
+                      },
+                      "parameters": [
+                        "",
+                        ""
+                      ]
+                    }
+                  ]
                 }
               ]
             }
@@ -1396,6 +1514,39 @@
               "width": 0
             }
           ],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Light",
+              "doubleParameters": {
+                "elevation": 45,
+                "intensity": 1,
+                "rotation": 0
+              },
+              "stringParameters": {
+                "groundColor": "64;64;64",
+                "skyColor": "255;255;255",
+                "top": "Y-"
+              },
+              "booleanParameters": {}
+            }
+          ]
+        },
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "Mouse",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [],
           "effects": [
             {
               "effectType": "Scene3D::HemisphereLight",
@@ -1470,7 +1621,11 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
+<<<<<<< HEAD
         "zoomFactor": 0.5079575118131751,
+=======
+        "zoomFactor": 0.38958562738273006,
+>>>>>>> 2276f8ba07d762e0b4a1f5b2f010ab865ae1e748
         "windowMask": false
       },
       "objectsGroups": [],
@@ -3578,7 +3733,11 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
+<<<<<<< HEAD
         "zoomFactor": 0.44485159988867967,
+=======
+        "zoomFactor": 0.3645833333333453,
+>>>>>>> 2276f8ba07d762e0b4a1f5b2f010ab865ae1e748
         "windowMask": false
       },
       "objectsGroups": [
@@ -6297,6 +6456,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -6660,6 +6820,7 @@
           "comment": "SET"
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [],
@@ -6980,6 +7141,7 @@
           ]
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [],
@@ -7021,6 +7183,16 @@
                     "value": "BuiltinCommonInstructions::Once"
                   },
                   "parameters": []
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "Building_Mode",
+                    "True",
+                    ""
+                  ]
                 }
               ],
               "actions": [],
@@ -7192,6 +7364,16 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "Building_Mode",
+                    "True",
+                    ""
+                  ]
                 }
               ],
               "actions": [],
@@ -7338,7 +7520,6 @@
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [],
@@ -8747,17 +8928,53 @@
                           ]
                         }
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "value": "Scene"
+                        "value": "SendAsyncRequest"
+                      },
+                      "parameters": [
+                        "\"http://127.0.0.1/postscore\"",
+                        "ToJSON(GameData)",
+                        "\"POST\"",
+                        "\"application/json\"",
+                        "score",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "JSONToVariableStructure2"
                       },
                       "parameters": [
                         "",
-                        "\"Level_01\"",
                         ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Scene"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Level_01\"",
+                            ""
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -10105,7 +10322,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.5079575118131897,
+        "zoomFactor": 0.47535850871270857,
         "windowMask": false
       },
       "objectsGroups": [
@@ -10339,7 +10556,7 @@
           "layer": "",
           "name": "BlockBackground",
           "persistentUuid": "73df7387-7a97-4485-a67e-f9b5e07300b0",
-          "width": 384,
+          "width": 512,
           "x": 1696,
           "y": 0,
           "zOrder": 12,
@@ -10406,7 +10623,7 @@
           "layer": "",
           "name": "Floor2",
           "persistentUuid": "a558334e-0f56-419e-bef6-ef91c3d38589",
-          "width": 2144,
+          "width": 2272,
           "x": -32,
           "y": 1120,
           "zOrder": 18,
@@ -10418,14 +10635,14 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 896,
+          "height": 1152,
           "keepRatio": true,
           "layer": "",
           "name": "Floor",
           "persistentUuid": "479a6739-e8e4-46e4-ad05-512b8199e42d",
           "width": 32,
           "x": 1696,
-          "y": 224,
+          "y": -32,
           "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
@@ -10440,7 +10657,7 @@
           "layer": "",
           "name": "Floor",
           "persistentUuid": "2896ce8d-0514-411e-8e09-303613a88d7e",
-          "width": 2080,
+          "width": 2208,
           "x": 0,
           "y": -32,
           "zOrder": 17,
@@ -10458,7 +10675,7 @@
           "name": "Floor",
           "persistentUuid": "e4348cbb-c146-462e-81c0-2b754823144c",
           "width": 32,
-          "x": 2080,
+          "x": 2208,
           "y": -32,
           "zOrder": 17,
           "numberProperties": [],
@@ -13657,6 +13874,16 @@
                     "value": "BuiltinCommonInstructions::Once"
                   },
                   "parameters": []
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "Building_Mode",
+                    "True",
+                    ""
+                  ]
                 }
               ],
               "actions": [],
@@ -13827,6 +14054,16 @@
                         ""
                       ]
                     }
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "Building_Mode",
+                    "True",
+                    ""
                   ]
                 }
               ],
@@ -17918,7 +18155,7 @@
           "layer": "",
           "name": "BlockBackground",
           "persistentUuid": "73df7387-7a97-4485-a67e-f9b5e07300b0",
-          "width": 384,
+          "width": 512,
           "x": 1696,
           "y": 0,
           "zOrder": 12,
@@ -17985,7 +18222,7 @@
           "layer": "",
           "name": "Floor2",
           "persistentUuid": "a558334e-0f56-419e-bef6-ef91c3d38589",
-          "width": 2144,
+          "width": 2272,
           "x": -32,
           "y": 1120,
           "zOrder": 18,
@@ -17997,14 +18234,14 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 896,
+          "height": 1120,
           "keepRatio": true,
           "layer": "",
           "name": "Floor",
           "persistentUuid": "479a6739-e8e4-46e4-ad05-512b8199e42d",
           "width": 32,
           "x": 1696,
-          "y": 224,
+          "y": 0,
           "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
@@ -18019,7 +18256,7 @@
           "layer": "",
           "name": "Floor",
           "persistentUuid": "2896ce8d-0514-411e-8e09-303613a88d7e",
-          "width": 2080,
+          "width": 2240,
           "x": 0,
           "y": -32,
           "zOrder": 17,
@@ -18037,7 +18274,7 @@
           "name": "Floor",
           "persistentUuid": "e4348cbb-c146-462e-81c0-2b754823144c",
           "width": 32,
-          "x": 2080,
+          "x": 2208,
           "y": -32,
           "zOrder": 17,
           "numberProperties": [],
@@ -21635,6 +21872,7 @@
           "actions": [],
           "events": [
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -21663,6 +21901,16 @@
                         ""
                       ]
                     }
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "Building_Mode",
+                    "True",
+                    ""
                   ]
                 },
                 {
@@ -21812,6 +22060,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -21840,6 +22089,16 @@
                         ""
                       ]
                     }
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "Building_Mode",
+                    "True",
+                    ""
                   ]
                 }
               ],
@@ -36609,6 +36868,149 @@
           "sharedPropertyDescriptors": []
         }
       ],
+      "eventsBasedObjects": []
+    },
+    {
+      "author": "Arthur Pacaud (arthuro555)",
+      "category": "Input",
+      "extensionNamespace": "",
+      "fullName": "Back button",
+      "gdevelopVersion": ">=5.5.222",
+      "helpPath": "",
+      "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0ibWRpLWtleWJvYXJkLWJhY2tzcGFjZSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGQ9Ik0yMSwxMUg2LjgzTDEwLjQxLDcuNDFMOSw2TDMsMTJMOSwxOEwxMC40MSwxNi41OEw2LjgzLDEzSDIxVjExWiIgLz48L3N2Zz4=",
+      "name": "BackButton",
+      "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/keyboard-backspace.svg",
+      "shortDescription": "Adds interactions with the back button.",
+      "version": "1.0.0",
+      "description": "Prevents the back button from quitting the game and provides a condition to check when it's pressed (to allow customising its behavior).",
+      "origin": {
+        "identifier": "BackButton",
+        "name": "gdevelop-extension-store"
+      },
+      "tags": [
+        "back",
+        "mobile",
+        "button",
+        "input"
+      ],
+      "authorIds": [
+        "ZgrsWuRTAkXgeuPV9bo0zuEcA2w1"
+      ],
+      "dependencies": [],
+      "globalVariables": [],
+      "sceneVariables": [],
+      "eventsFunctions": [
+        {
+          "fullName": "",
+          "functionType": "Action",
+          "name": "onFirstSceneLoaded",
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "gdjs.evtTools.back_button = {",
+                "    triggered: false,",
+                "    _popStateListener: (event) => {",
+                "        gdjs.evtTools.back_button.triggered = true;",
+                "        history.pushState(\"\", \"\"); // Push a new fake state as the old one was popped",
+                "    }",
+                "};",
+                "",
+                "// Handle back button on the web",
+                "history.pushState(\"\", \"\"); // Push a fake state to prevent switching page when clicking on back",
+                "window.addEventListener('popstate', gdjs.evtTools.back_button._popStateListener);",
+                "",
+                "// Handle back button on cordova",
+                "document.addEventListener(\"backbutton\", e => {",
+                "    e.preventDefault();",
+                "    gdjs.evtTools.back_button.triggered = true;",
+                "}, false); ",
+                ""
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            }
+          ],
+          "parameters": [],
+          "objectGroups": []
+        },
+        {
+          "description": "Triggers whenever the player presses the back button.",
+          "fullName": "Back button is pressed",
+          "functionType": "Condition",
+          "name": "onBackButtonPressed",
+          "sentence": "Back button is pressed",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "eventsFunctionContext.returnValue = gdjs.evtTools.back_button.triggered;",
+                ""
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            }
+          ],
+          "parameters": [],
+          "objectGroups": []
+        },
+        {
+          "description": "This simulates the normal action of the back button. \nThis action will quit the app when in a mobile app, and go back to the previous page when in a web browser.",
+          "fullName": "Trigger back button",
+          "functionType": "Action",
+          "name": "doDefault",
+          "sentence": "Simulate back button press",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "// Close the app on cordova, as this is the default behavior",
+                "if (navigator.app) {",
+                "    navigator.app.exitApp();",
+                "} else if (navigator.device && navigator.device.exitApp) {",
+                "    navigator.device.exitApp();",
+                "} else {",
+                "    // Go to previous page as it is the default on browsers",
+                "    // Remove the listener so new fake states don't get pushed",
+                "    window.removeEventListener('popstate', gdjs.evtTools.back_button._popStateListener);",
+                "    history.back(); // Remove the state that prevents going back",
+                "    history.back(); // Actually go back",
+                "}",
+                ""
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            }
+          ],
+          "parameters": [],
+          "objectGroups": []
+        },
+        {
+          "fullName": "",
+          "functionType": "Action",
+          "name": "onScenePostEvents",
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "gdjs.evtTools.back_button.triggered = false;",
+                ""
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            }
+          ],
+          "parameters": [],
+          "objectGroups": []
+        }
+      ],
+      "eventsBasedBehaviors": [],
       "eventsBasedObjects": []
     }
   ],
